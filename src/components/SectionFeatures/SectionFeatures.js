@@ -2,7 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 
 import styles from "assets/jss/material-kit-react/views/componentsSections/basicsStyle.js";
-import CardFeature from "components/CardFeature/CardFeature";
+import CardFeature from "../CardFeature/CardFeature";
 import { Grid } from "@material-ui/core";
 
 const useStyles = makeStyles(styles);

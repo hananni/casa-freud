@@ -55,6 +55,12 @@ const typographyStyle = {
     fontWeight: "400",
     lineHeight: "1",
     color: "#777"
+  },
+  titleFreud: {
+    color: "#000",
+    fontSize: 25,
+    fontWeight: 600,
+    textAlign: "center"
   }
 };
 

@@ -27,10 +27,10 @@ import SectionCompletedExamples from "./Sections/SectionCompletedExamples.js";
 import SectionLogin from "./Sections/SectionLogin.js";
 import SectionExamples from "./Sections/SectionExamples.js";
 import SectionDownload from "./Sections/SectionDownload.js";
-import SectionFeatures from "./Sections/SectionFeatures.js";
-
+import SectionFeatures from "../../components/SectionFeatures/SectionFeatures";
 import styles from "assets/jss/material-kit-react/views/components.js";
-
+import SectionCourses from "components/SectionCourses/SectionCourses.js";
+import SectionGallery from "./Sections/SectionGallery.js";
 const useStyles = makeStyles(styles);
 
 export default function Components(props) {
@@ -55,7 +55,9 @@ export default function Components(props) {
 
       <div className={classNames(classes.main)}>
         <SectionFeatures />
-        <SectionBasics />
+        <SectionCourses />
+        <SectionGallery />
+        {/* <SectionBasics />
         <SectionNavbars />
         <SectionTabs />
         <SectionPills />
@@ -73,7 +75,7 @@ export default function Components(props) {
           </Link>
         </GridItem>
         <SectionExamples />
-        <SectionDownload />
+        <SectionDownload /> */}
       </div>
       <Footer />
     </div>
