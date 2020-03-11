@@ -6,35 +6,9 @@ import CardFeature from "../CardFeature/CardFeature";
 import { Grid, Box } from "@material-ui/core";
 import TitleFreud from "components/Typography/TitleFreud";
 import CardCourse from "./CardCourse";
+import { COURSES } from "data";
 
 const useStyles = makeStyles(styles);
-
-const courses = [
-  {
-    title: "Formação em Psicanálise",
-    description:
-      "É simplesmente uma simulação de texto da indústria tipográfica e de impressos.",
-    link: "",
-    image:
-      "https://meusonhar.com.br/wp-content/uploads/2014/08/sonhar-estudando.jpg"
-  },
-  {
-    title: "Formação em Psicanálise (EAD) ",
-    description:
-      "É simplesmente uma simulação de texto da indústria tipográfica e de impressos.",
-    link: "",
-    image:
-      "https://meusonhar.com.br/wp-content/uploads/2014/08/sonhar-estudando.jpg"
-  },
-  {
-    title: "Especialização em Psicologia Clínica",
-    description:
-      "É simplesmente uma simulação de texto da indústria tipográfica e de impressos.",
-    link: "",
-    image:
-      "https://meusonhar.com.br/wp-content/uploads/2014/08/sonhar-estudando.jpg"
-  }
-];
 
 const SectionCourses = () => {
   const classes = useStyles();
@@ -45,7 +19,7 @@ const SectionCourses = () => {
         <TitleFreud title="Cursos Oferecidos" />
       </Box>
       <Grid container spacing={1}>
-        {courses.map(course => {
+        {COURSES.map(course => {
           return (
             <Grid key={course.title} item xs={12} sm={4}>
               <CardCourse title={course.title} image={course.image}>

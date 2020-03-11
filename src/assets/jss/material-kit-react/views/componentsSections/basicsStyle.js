@@ -20,6 +20,9 @@ const basicsStyle = {
     height: "70px",
     display: "block"
   },
+  freudBg: {
+    backgroundColor: "#f9f9ff"
+  },
   icons: {
     width: "17px",
     height: "17px",
