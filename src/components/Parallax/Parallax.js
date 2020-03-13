@@ -11,7 +11,7 @@ import styles from "assets/jss/material-kit-react/components/parallaxStyle.js";
 
 const useStyles = makeStyles(styles);
 
-export default function Parallax(props) {
+const Parallax = props => {
   let windowScrollTop;
   if (window.innerWidth >= 768) {
     windowScrollTop = window.pageYOffset / 3;
@@ -55,7 +55,7 @@ export default function Parallax(props) {
       {children}
     </div>
   );
-}
+};
 
 Parallax.propTypes = {
   className: PropTypes.string,
@@ -65,3 +65,5 @@ Parallax.propTypes = {
   image: PropTypes.string,
   small: PropTypes.bool
 };
+
+export default Parallax;

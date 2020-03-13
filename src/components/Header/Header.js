@@ -18,7 +18,7 @@ import styles from "assets/jss/material-kit-react/components/headerStyle.js";
 
 const useStyles = makeStyles(styles);
 
-export default function Header(props) {
+const Header = props => {
   const classes = useStyles();
   const [mobileOpen, setMobileOpen] = React.useState(false);
   React.useEffect(() => {
@@ -105,7 +105,7 @@ export default function Header(props) {
       </Hidden>
     </AppBar>
   );
-}
+};
 
 Header.defaultProp = {
   color: "white"
@@ -149,3 +149,5 @@ Header.propTypes = {
     ]).isRequired
   })
 };
+
+export default Header;

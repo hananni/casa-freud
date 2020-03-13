@@ -1,6 +1,7 @@
 import { container, primaryColor } from "assets/jss/material-kit-react.js";
+import { makeStyles } from "@material-ui/core/styles";
 
-const footerStyle = {
+const footerStyle = makeStyles(theme => ({
   block: {
     color: "inherit",
     padding: "0.9375rem",
@@ -22,11 +23,13 @@ const footerStyle = {
     float: "right!important"
   },
   footer: {
+    backgroundColor: "#0c1536",
     padding: "0.9375rem 0",
-    textAlign: "center",
+    // textAlign: "center",
     display: "flex",
     zIndex: "2",
-    position: "relative"
+    position: "relative",
+    color: "#fff"
   },
   a: {
     color: primaryColor,
@@ -54,6 +57,39 @@ const footerStyle = {
     height: "18px",
     position: "relative",
     top: "3px"
+  },
+  newsletter: {
+    fontWeight: 600,
+    fontSize: 17
+  },
+  descriptionNewsletter: {
+    marginTop: 20,
+    fontSize: 14,
+    color: "#5b5d65"
+  },
+  root: {
+    borderRadius: 0,
+    display: "flex",
+    alignItems: "center",
+    width: "100%"
+  },
+  input: {
+    marginLeft: theme.spacing(1),
+    flex: 1
+  },
+  iconButton: {
+    padding: 10,
+    backgroundColor: "#3a4bab",
+    borderRadius: 0,
+    padding: 15
+  },
+  divider: {
+    height: 28,
+    margin: 4
+  },
+  copyright: {
+    fontSize: 11
   }
-};
+}));
+
 export default footerStyle;
