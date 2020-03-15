@@ -5,7 +5,7 @@ import GridContainer from "components/Grid/GridContainer.js";
 import styles from "assets/jss/material-kit-react/views/componentsSections/basicsStyle.js";
 import { Grid, Box } from "@material-ui/core";
 import TitleFreud from "components/Typography/TitleFreud";
-import { IMAGES } from "data";
+import { IMAGES } from "common-data";
 
 const useStyles = makeStyles(styles);
 

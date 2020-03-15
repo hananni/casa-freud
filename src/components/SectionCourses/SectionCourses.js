@@ -6,7 +6,7 @@ import CardFeature from "../CardFeature/CardFeature";
 import { Grid, Box } from "@material-ui/core";
 import TitleFreud from "components/Typography/TitleFreud";
 import CardCourse from "./CardCourse";
-import { COURSES } from "data";
+import { COURSES } from "common-data";
 
 const useStyles = makeStyles(styles);
 

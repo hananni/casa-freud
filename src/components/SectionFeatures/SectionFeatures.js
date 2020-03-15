@@ -4,7 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import styles from "assets/jss/material-kit-react/views/componentsSections/basicsStyle.js";
 import CardFeature from "../CardFeature/CardFeature";
 import { Grid } from "@material-ui/core";
-import { FEATURES } from "data";
+import { FEATURES } from "common-data";
 
 const useStyles = makeStyles(styles);
 

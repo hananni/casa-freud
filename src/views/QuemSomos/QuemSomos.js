@@ -14,6 +14,9 @@ import Parallax from "components/Parallax/Parallax.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import SectionFeatures from "../../components/SectionFeatures/SectionFeatures";
 import styles from "assets/jss/material-kit-react/views/components.js";
+import TitlePage from "components/TitlePage/TitlePage";
+import ImageText from "components/ImageText/ImageText";
+import { WHO_WE_ARE } from "../../quem-somos-data";
 const useStyles = makeStyles(styles);
 
 const QuemSomos = props => {
@@ -36,10 +39,13 @@ const QuemSomos = props => {
         style={{ height: "45vh" }}
         image={require("assets/img/bg4.jpg")}
       >
-        Quem Somos
+        <TitlePage title="Quem somos" />
       </Parallax>
       <div className={classNames(classes.main)}>
         <SectionFeatures />
+        <ImageText title={WHO_WE_ARE.title} image={WHO_WE_ARE.image}>
+          {WHO_WE_ARE.description}
+        </ImageText>
       </div>
       <Footer />
     </div>
