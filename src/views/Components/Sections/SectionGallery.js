@@ -16,7 +16,7 @@ export default function SectionGallery() {
     <Box mt={8} mb={8}>
       <div className={classes.section}>
         <Box mb={4}>
-          <TitleFreud title="Galeria" />
+          <TitleFreud title="Galeria" center />
         </Box>
         <div className={classes.container} style={{ display: "grid" }}>
           <Gallery enableImageSelection={false} images={IMAGES} />

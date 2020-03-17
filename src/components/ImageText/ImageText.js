@@ -1,14 +1,9 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import styled from "styled-components";
-import { Typography, Box, Grid } from "@material-ui/core";
-import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
+import { Box, Grid } from "@material-ui/core";
+import TitleFreud from "components/Typography/TitleFreud";
 
-const Title = styled.p`
-  color: #000;
-  font-size: 40px;
-  font-weight: 400;
-`;
 const Description = styled.p`
   text-align: justify;
   margin-top: 20px;
@@ -28,7 +23,7 @@ const TextField = ({ title, children }) => {
   return (
     <Grid item xs={12} md={4}>
       <Box ml={3} mr={3}>
-        <Title>{title}</Title>
+        <TitleFreud soft title={title} />
         <Description>{children}</Description>
       </Box>
     </Grid>

@@ -16,7 +16,7 @@ const SectionCourses = () => {
   return (
     <Box mt={8} className={classes.container}>
       <Box mb={4}>
-        <TitleFreud title="Cursos Oferecidos" />
+        <TitleFreud title="Cursos Oferecidos" center />
       </Box>
       <Grid container spacing={1}>
         {COURSES.map(course => {

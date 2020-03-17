@@ -17,6 +17,7 @@ import styles from "assets/jss/material-kit-react/views/components.js";
 import TitlePage from "components/TitlePage/TitlePage";
 import ImageText from "components/ImageText/ImageText";
 import { WHO_WE_ARE } from "../../quem-somos-data";
+import SectionProfessors from "./Sections/SectionProfessors";
 const useStyles = makeStyles(styles);
 
 const QuemSomos = props => {
@@ -46,6 +47,7 @@ const QuemSomos = props => {
         <ImageText title={WHO_WE_ARE.title} image={WHO_WE_ARE.image}>
           {WHO_WE_ARE.description}
         </ImageText>
+        <SectionProfessors />
       </div>
       <Footer />
     </div>
