@@ -14,7 +14,7 @@ const Title = styled.p`
 
 const KnowMore = styled.div`
   color: #fff;
-  background-image: -webkit-linear-gradient(-45deg, #3636de 90%, #ffffff00 10%);
+  background-image: -webkit-linear-gradient(-45deg, #005AAA 90%, #ffffff00 10%);
   text-align: right;
   padding-right: 25px;
   font-size: 13px;
@@ -25,7 +25,7 @@ const KnowMore = styled.div`
 const CustomIcon = styled.i`
   padding: 0px 5px 0 5px;
   font-size: 18px;
-  color: #3636de;
+  color: #005AAA;
   text-align: right;
   cursor: pointer;
 `;

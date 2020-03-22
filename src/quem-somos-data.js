@@ -1,5 +1,10 @@
 import whoWeAre from "assets/img/who-we-are.jpg";
 import olivio from "assets/img/olivio.jpg";
+import valeria from "assets/img/valeria.JPG";
+import marcio from "assets/img/marcio.JPG";
+import sheila from "assets/img/sheila.JPG";
+import nelson from "assets/img/nelson.JPG";
+import lauane from "assets/img/lauane.JPG";
 
 const WHO_WE_ARE = {
   title: "Quem somos",
@@ -15,29 +20,29 @@ const PROFESSORS = [
     image: olivio
   },
   {
-    title: "Profº M.e Olivio Israel Costa",
+    title: "Profª Esp.Valéria Lopes da Silva",
     description: "Psicólogo (FLA-Anápolis), Psicanalista",
-    image: olivio
+    image: valeria
   },
   {
-    title: "Profº M.e Olivio Israel Costa",
-    description: "Psicólogo (FLA-Anápolis), Psicanalista",
-    image: olivio
+    title: "Profº M.e Márcio Luppi",
+    description: "Psicólogo (UPM-SP), Psicanalista",
+    image: marcio
   },
   {
-    title: "Profº M.e Olivio Israel Costa",
+    title: "Profª Sheila",
     description: "Psicólogo (FLA-Anápolis), Psicanalista",
-    image: olivio
+    image: sheila
   },
   {
-    title: "Profº M.e Olivio Israel Costa",
+    title: "Profº Dr.Nelson de Abreu Júnior",
     description: "Psicólogo (FLA-Anápolis), Psicanalista",
-    image: olivio
+    image: nelson
   },
   {
-    title: "Profº M.e Olivio Israel Costa",
+    title: "Profª Esp.Lauane Carolina Diniz",
     description: "Psicólogo (FLA-Anápolis), Psicanalista",
-    image: olivio
+    image: lauane
   }
 ];
 
