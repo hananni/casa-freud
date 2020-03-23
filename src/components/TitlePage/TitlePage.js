@@ -12,7 +12,7 @@ const Title = styled.p`
 `;
 
 const Breadcrumbs = styled.p`
-  color: #370096;
+  color: #005aaa;
   text-align: center;
   font-size: 15px;
   font-weight: 500;

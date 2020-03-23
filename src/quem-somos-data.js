@@ -46,4 +46,11 @@ const PROFESSORS = [
   }
 ];
 
-export { WHO_WE_ARE, PROFESSORS };
+const GOALS = {
+  title: "Nossos Objetivos",
+  image: whoWeAre,
+  description:
+    "Inspirada nos princípios de Sigmund Freud, a Escola prioriza os ensinamentos e concepções psicanalíticos que visam à prática clínica (não apenas em consultório, mas nas relações humanas como um todo) e o saber acadêmico"
+};
+
+export { WHO_WE_ARE, PROFESSORS, GOALS };

@@ -48,6 +48,7 @@ const Parallax = props => {
       className={parallaxClasses}
       style={{
         ...style,
+        height: props.home ? "100vh" : "45vh",
         backgroundImage: "url(" + image + ")",
         transform: transform
       }}

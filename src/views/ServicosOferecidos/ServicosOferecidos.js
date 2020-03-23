@@ -15,12 +15,14 @@ import HeaderLinks from "components/Header/HeaderLinks.js";
 import SectionFeatures from "../../components/SectionFeatures/SectionFeatures";
 import styles from "assets/jss/material-kit-react/views/components.js";
 import TitlePage from "components/TitlePage/TitlePage";
-import ImageText from "components/ImageText/ImageText";
 import { WHO_WE_ARE, GOALS } from "../../quem-somos-data";
-import SectionProfessors from "./Sections/SectionProfessors";
+import { Typography, Grid } from "@material-ui/core";
+import SectionServices from "./Sections/SectionServices";
+import SectionLibrary from "./Sections/SectionLibrary";
+import SectionWorkGroup from "./Sections/SectionWorkGroup";
 const useStyles = makeStyles(styles);
 
-const QuemSomos = props => {
+const ServicosOferecidos = props => {
   const classes = useStyles();
   const { ...rest } = props;
   return (
@@ -37,21 +39,17 @@ const QuemSomos = props => {
         {...rest}
       />
       <Parallax image={require("assets/img/bg4.jpg")}>
-        <TitlePage title="Quem somos" />
+        <TitlePage title="Serviços oferecidos" />
       </Parallax>
       <div className={classNames(classes.main)}>
         <SectionFeatures />
-        <ImageText title={WHO_WE_ARE.title} image={WHO_WE_ARE.image}>
-          {WHO_WE_ARE.description}
-        </ImageText>
-        <SectionProfessors />
-        <ImageText title={GOALS.title} image={GOALS.image} rightImage>
-          {GOALS.description}
-        </ImageText>
+        <SectionServices />
+        <SectionLibrary />
+        <SectionWorkGroup />
       </div>
       <Footer />
     </div>
   );
 };
 
-export default QuemSomos;
+export default ServicosOferecidos;
