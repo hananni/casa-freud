@@ -7,7 +7,7 @@ const cardStyle = {
     flexDirection: "column",
     minWidth: "0",
     wordWrap: "break-word",
-    padding: 0
+    padding: 5
   },
   body: {
     paddingTop: 15,

@@ -101,7 +101,7 @@
 .slick-slide {
   display: none;
   float: left;
-
+  // padding: 10px;
   height: 100%;
   min-height: 1px;
 }
@@ -159,7 +159,7 @@ button.slick-arrow.slick-next {
   &::before {
     content: "\f053";
     font-weight: 600;
-    font-family: Font Awesome\ 5 Free;
+    font-family: Font awesome\5 Free;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     display: inline-block;
@@ -177,7 +177,7 @@ button.slick-arrow.slick-next {
   &::before {
     content: "\f054";
     font-weight: 600;
-    font-family: Font Awesome\ 5 Free;
+    font-family: Font awesome\5 Free;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     display: inline-block;
@@ -193,11 +193,11 @@ button.slick-arrow.slick-next {
 .slick-list {
   z-index: 1;
 }
+
 .slick-dots {
   margin-top: 0;
   margin-bottom: 1rem;
   position: absolute;
-  bottom: 5px;
   // margin-right: 15%;
   // margin-left: 15%;
   width: 100%;
@@ -251,4 +251,5 @@ button.slick-arrow.slick-next {
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12),
     0 2px 4px -1px rgba(0, 0, 0, 0.2);
   top: -3px;
+  background-color: #4615b6;
 }

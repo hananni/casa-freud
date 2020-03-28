@@ -43,6 +43,14 @@ const COURSES = [
     link: "",
     image:
       "https://meusonhar.com.br/wp-content/uploads/2014/08/sonhar-estudando.jpg"
+  },
+  {
+    title: "Especialização em Psicologia Clínica",
+    description:
+      "É simplesmente uma simulação de texto da indústria tipográfica e de impressos.",
+    link: "",
+    image:
+      "https://meusonhar.com.br/wp-content/uploads/2014/08/sonhar-estudando.jpg"
   }
 ];
 

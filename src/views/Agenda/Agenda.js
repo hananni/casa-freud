@@ -17,36 +17,36 @@ import styles from "assets/jss/material-kit-react/views/components.js";
 import TitlePage from "components/TitlePage/TitlePage";
 import { WHO_WE_ARE, GOALS } from "../../quem-somos-data";
 import { Typography, Grid } from "@material-ui/core";
-import SectionServices from "./Sections/SectionServices";
+import SectionActivities from "./Sections/SectionActivities";
 
 const useStyles = makeStyles(styles);
 
 const Agenda = props => {
-    const classes = useStyles();
-    const { ...rest } = props;
-    return (
-      <div>
-        <Header
-          brand="Material Kit React"
-          rightLinks={<HeaderLinks />}
-          fixed
-          color="transparent"
-          changeColorOnScroll={{
-            height: 400,
-            color: "white"
-          }}
-          {...rest}
-        />
-        <Parallax image={require("assets/img/bg4.jpg")}>
-          <TitlePage title="Agenda" />
-        </Parallax>
-        <div className={classNames(classes.main)}>
-          <SectionFeatures />
-          
-        </div>
-        <Footer />
+  const classes = useStyles();
+  const { ...rest } = props;
+  return (
+    <div>
+      <Header
+        brand="Material Kit React"
+        rightLinks={<HeaderLinks />}
+        fixed
+        color="transparent"
+        changeColorOnScroll={{
+          height: 400,
+          color: "white"
+        }}
+        {...rest}
+      />
+      <Parallax image={require("assets/img/bg4.jpg")}>
+        <TitlePage title="Agenda" />
+      </Parallax>
+      <div className={classNames(classes.main)}>
+        <SectionFeatures />
+        <SectionActivities />
       </div>
-    );
-  };
-  
-  export default Agenda;
+      <Footer />
+    </div>
+  );
+};
+
+export default Agenda;
