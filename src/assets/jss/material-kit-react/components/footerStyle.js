@@ -79,7 +79,7 @@ const footerStyle = makeStyles(theme => ({
   },
   iconButton: {
     padding: 10,
-    backgroundColor: "#3a4bab",
+    backgroundColor: "#005AAA",
     borderRadius: 0,
     padding: 15
   },

@@ -10,7 +10,7 @@ const useStyles = makeStyles(styles);
 
 const WorkGroupBackground = styled.div`
   background-image: url(${gruposdetrabalho});
-  height: 250px;
+  height: 400px;
   background-size: cover;
   background-position: center center;
 `;
