@@ -12,6 +12,7 @@ const Title = styled.p`
   color: ${props => props.color};
   font-style: ${props => props.fontStyle};
   font-size: 35px;
+  margin-bottom: ${props => (props.marginBottom ? props.marginBottom : "0px")};
   font-weight: ${props => (props.soft ? "400" : "600")};
 
   text-align: ${props =>
@@ -27,6 +28,7 @@ export default function TitleFreud({
   center,
   right,
   color = "#000",
+  marginBottom,
   fontStyle = "normal"
 }) {
   const classes = useStyles();
@@ -39,6 +41,7 @@ export default function TitleFreud({
           color={color}
           fontStyle={fontStyle}
           right={right}
+          marginBottom={marginBottom}
         >
           {title}
         </Title>

@@ -8,11 +8,11 @@ import { EVALUATIONS } from "common-data";
 
 const useStyles = makeStyles(styles);
 
-const SectionEvaluation = () => {
+const SectionEvaluation = ({ noMarginTop = false }) => {
   const classes = useStyles();
 
   return (
-    <Box mt={8} p={10} className={classes.freudBg}>
+    <Box mt={noMarginTop ? 0 : 8} p={10} className={classes.freudBg}>
       <Box className={classes.container}>
         <Grid container spacing={4}>
           {EVALUATIONS.map(evaluation => {

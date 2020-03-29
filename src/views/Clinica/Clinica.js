@@ -15,12 +15,12 @@ import HeaderLinks from "components/Header/HeaderLinks.js";
 import SectionFeatures from "../../components/SectionFeatures/SectionFeatures";
 import styles from "assets/jss/material-kit-react/views/components.js";
 import TitlePage from "components/TitlePage/TitlePage";
-import SectionActivities from "./Sections/SectionActivities";
+import SectionRoom from "./Sections/SectionRoom";
 import SectionEvaluation from "components/SectionEvalutation/SectionEvaluation";
 
 const useStyles = makeStyles(styles);
 
-const Agenda = props => {
+const Clinica = props => {
   const classes = useStyles();
   const { ...rest } = props;
   return (
@@ -37,16 +37,16 @@ const Agenda = props => {
         {...rest}
       />
       <Parallax image={require("assets/img/bg4.jpg")}>
-        <TitlePage title="Agenda" />
+        <TitlePage title="Clínica" />
       </Parallax>
       <div className={classNames(classes.main)}>
         <SectionFeatures />
-        <SectionActivities />
-        <SectionEvaluation />
+        <SectionRoom />
+        <SectionEvaluation noMarginTop />
       </div>
       <Footer />
     </div>
   );
 };
 
-export default Agenda;
+export default Clinica;

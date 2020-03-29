@@ -33,6 +33,12 @@ const DateTime = styled.div`
   padding: 10px;
 `;
 
+const Description = styled.div`
+  padding: 10px;
+  font-size: 14px;
+  color: #979797;
+`;
+
 const CardActivity = ({ image, title, subtitle, description, date }) => {
   return (
     <Card>
@@ -44,7 +50,7 @@ const CardActivity = ({ image, title, subtitle, description, date }) => {
           <Box p={3}>
             <Title>{title}</Title>
             <SubTitle>{subtitle}</SubTitle>
-            <Box mt={2}>{description}</Box>
+            <Description>{description}</Description>
           </Box>
           <Grid container style={{ position: "absolute", bottom: 0 }}>
             <Grid item xs={12}>
