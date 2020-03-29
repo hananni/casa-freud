@@ -21,7 +21,7 @@ const ImageField = ({ image }) => {
 
 const TextField = ({ title, children }) => {
   return (
-    <Grid item xs={12} md={4}>
+    <Grid item xs={12} md={5}>
       <Box ml={3} mr={3}>
         <TitleFreud soft title={title} />
         <Description>{children}</Description>

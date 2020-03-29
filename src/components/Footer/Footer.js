@@ -40,7 +40,6 @@ const Footer = props => {
   });
   return (
     <div>
-      <Box p={3} style={{ backgroundColor: "#F9F9FF" }}></Box>
       <footer className={footerClasses}>
         <div className={classes.container}>
           <Grid container>
