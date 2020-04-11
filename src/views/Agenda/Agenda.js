@@ -26,7 +26,6 @@ const Agenda = props => {
   return (
     <div>
       <Header
-        brand="Material Kit React"
         rightLinks={<HeaderLinks />}
         fixed
         color="transparent"

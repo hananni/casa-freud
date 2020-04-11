@@ -8,33 +8,34 @@ import { makeStyles } from "@material-ui/core/styles";
 
 // core components
 import styles from "assets/jss/material-kit-react/components/parallaxStyle.js";
-
+import logo from "assets/img/logorcabeca.png";
+import { Container, Box } from "@material-ui/core";
 const useStyles = makeStyles(styles);
 
 const Parallax = props => {
-  let windowScrollTop;
-  if (window.innerWidth >= 768) {
-    windowScrollTop = window.pageYOffset / 3;
-  } else {
-    windowScrollTop = 0;
-  }
-  const [transform, setTransform] = React.useState(
-    "translate3d(0," + windowScrollTop + "px,0)"
-  );
-  React.useEffect(() => {
-    if (window.innerWidth >= 768) {
-      window.addEventListener("scroll", resetTransform);
-    }
-    return function cleanup() {
-      if (window.innerWidth >= 768) {
-        window.removeEventListener("scroll", resetTransform);
-      }
-    };
-  });
-  const resetTransform = () => {
-    var windowScrollTop = window.pageYOffset / 3;
-    setTransform("translate3d(0," + windowScrollTop + "px,0)");
-  };
+  // let windowScrollTop;
+  // if (window.innerWidth >= 768) {
+  //   windowScrollTop = window.pageYOffset / 3;
+  // } else {
+  //   windowScrollTop = 0;
+  // }
+  // const [transform, setTransform] = React.useState(
+  //   "translate3d(0," + windowScrollTop + "px,0)"
+  // );
+  // React.useEffect(() => {
+  //   if (window.innerWidth >= 768) {
+  //     window.addEventListener("scroll", resetTransform);
+  //   }
+  //   return function cleanup() {
+  //     if (window.innerWidth >= 768) {
+  //       window.removeEventListener("scroll", resetTransform);
+  //     }
+  //   };
+  // });
+  // const resetTransform = () => {
+  //   var windowScrollTop = window.pageYOffset;
+  //   setTransform("translate3d(0," + windowScrollTop + "px,0)");
+  // };
   const { filter, className, children, style, image, small } = props;
   const classes = useStyles();
   const parallaxClasses = classNames({
@@ -50,10 +51,18 @@ const Parallax = props => {
         ...style,
         height: props.home ? "100vh" : "45vh",
         backgroundImage: "url(" + image + ")",
-        transform: transform
+        backgroundAttachment: "fixed"
+        // transform: transform
       }}
     >
-      {children}
+      <div style={{ display: "block" }}>
+        <div className={classes.container}>
+          <Box mt={14}>
+            <img src={logo} />
+          </Box>
+        </div>
+      </div>
+      <div style={{ display: "flex" }}>{children}</div>
     </div>
   );
 };

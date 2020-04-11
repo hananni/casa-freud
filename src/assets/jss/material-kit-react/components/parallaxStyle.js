@@ -1,3 +1,5 @@
+import { container } from "assets/jss/material-kit-react.js";
+
 const parallaxStyle = {
   parallax: {
     height: "100vh",
@@ -9,8 +11,16 @@ const parallaxStyle = {
     margin: "0",
     padding: "0",
     border: "0",
-    display: "flex",
     alignItems: "center"
+  },
+  container: {
+    ...container,
+    minHeight: "50px",
+    flex: "1",
+    alignItems: "center",
+    justifyContent: "space-between",
+    display: "flex",
+    flexWrap: "nowrap"
   },
   filter: {
     "&:before": {

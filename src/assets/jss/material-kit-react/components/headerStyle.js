@@ -12,8 +12,11 @@ import {
   drawerWidth
 } from "assets/jss/material-kit-react.js";
 
+const HEADER_LOGO_SIZE = 40;
+
 const headerStyle = {
   appBar: {
+    top: HEADER_LOGO_SIZE,
     display: "flex",
     border: "0",
     borderRadius: "3px",
@@ -41,7 +44,6 @@ const headerStyle = {
   },
   container: {
     ...container,
-    minHeight: "50px",
     flex: "1",
     alignItems: "center",
     justifyContent: "space-between",
@@ -149,4 +151,4 @@ const headerStyle = {
   }
 };
 
-export default headerStyle;
+export { headerStyle, HEADER_LOGO_SIZE };
