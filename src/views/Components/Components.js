@@ -17,7 +17,7 @@ import styles from "assets/jss/material-kit-react/views/components.js";
 import SectionCourses from "components/SectionCourses/SectionCourses.js";
 import SectionGallery from "./Sections/SectionGallery.js";
 import SectionEvaluation from "components/SectionEvalutation/SectionEvaluation.js";
-import SectionCarousel from "./Sections/SectionCarousel";
+import SlideHome from "./Sections/SlideHome";
 const useStyles = makeStyles(styles);
 
 export default function Components(props) {
@@ -31,12 +31,14 @@ export default function Components(props) {
         color="transparent"
         changeColorOnScroll={{
           height: "650",
-          color: "white"
+          color: "white",
         }}
         {...rest}
       />
       <Parallax image={require("assets/img/bg4.jpg")} home>
-        <div className={classes.container}>{/* <SectionCarousel /> */}</div>
+        <div className={classes.container}>
+          <SlideHome />
+        </div>
       </Parallax>
 
       <div className={classNames(classes.main)}>
