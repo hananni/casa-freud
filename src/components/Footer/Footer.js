@@ -48,7 +48,7 @@ const Footer = props => {
                 <img src={logo} alt="LOGO_FREUD" width="60%" />
               </Box>
               <Box mr={10} ml={10} className={classes.address}>
-                Rua Barão do Rio Branco, Nº 1481 St. Central, Anápolis GO
+                Rua Barão do Rio Branco, Nº 1481 <br /> St. Central, Anápolis GO
               </Box>
             </Grid>
             <Grid item xs={12} md={6}>

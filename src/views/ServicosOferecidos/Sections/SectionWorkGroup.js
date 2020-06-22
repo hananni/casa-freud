@@ -43,8 +43,8 @@ const SectionWorkGroup = () => {
                   right
                 />
               </Box>
-              <Typography style={{ color: "#fff" }} align="right">
-                É simplesmente uma simulação de texto da indústria tipográfica e
+              <Typography style={{ color: "#fff", fontSize: "14px", fontWeight: "200", lineHeight: "1.3", paddingTop: "10px" }} align="right">
+                É simplesmente uma simulação <br /> de texto da indústria <br /> tipográfica e
                 de impressos.
               </Typography>
             </Grid>

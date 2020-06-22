@@ -14,6 +14,7 @@ import QuemSomos from "views/QuemSomos/QuemSomos";
 import ServicosOferecidos from "views/ServicosOferecidos/ServicosOferecidos";
 import Agenda from "views/Agenda/Agenda";
 import Clinica from "views/Clinica/Clinica";
+import Contato from "views/Contato/Contato";
 
 var hist = createBrowserHistory();
 
@@ -27,7 +28,7 @@ ReactDOM.render(
       <Route path="/servicos-oferecidos" component={ServicosOferecidos} />
       <Route path="/agenda" component={Agenda} />
       <Route path="/clinica" component={Clinica} />
-      <Route path="/" component={Components} />
+      <Route path="/contato" component={Contato} />
     </Switch>
   </Router>,
   document.getElementById("root")
