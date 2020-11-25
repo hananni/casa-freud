@@ -1,18 +1,28 @@
 const FEATURES = [
   {
+    id: 1,
     title: "EAD",
     description:
       "É simplesmente uma simulação de texto da indústria tipográfica e de impressos.",
     link: ""
   },
   {
+    id: 2,
     title: "Biblioteca virtual",
     description:
       "É simplesmente uma simulação de texto da indústria tipográfica e de impressos.",
     link: ""
   },
   {
+    id: 3,
     title: "Clínica",
+    description:
+      "É simplesmente uma simulação de texto da indústria tipográfica e de impressos.",
+    link: ""
+  },
+  {
+    id: 4,
+    title: "Agenda",
     description:
       "É simplesmente uma simulação de texto da indústria tipográfica e de impressos.",
     link: ""
@@ -59,7 +69,7 @@ const IMAGES = [
     src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
     thumbnail:
       "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_n.jpg",
-    thumbnailWidth: 320,
+    thumbnailWidth: 350,
     thumbnailHeight: 212,
     caption: "After Rain (Jeshu John - designerspics.com)"
   },
@@ -67,7 +77,7 @@ const IMAGES = [
     src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
     thumbnail:
       "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-    thumbnailWidth: 320,
+    thumbnailWidth: 350,
     thumbnailHeight: 212,
     tags: [
       { value: "Ocean", title: "Ocean" },
@@ -80,7 +90,7 @@ const IMAGES = [
     src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
     thumbnail:
       "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
-    thumbnailWidth: 320,
+    thumbnailWidth: 350,
     thumbnailHeight: 212
   },
 
@@ -88,7 +98,7 @@ const IMAGES = [
     src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
     thumbnail:
       "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
-    thumbnailWidth: 320,
+    thumbnailWidth: 350,
     thumbnailHeight: 212
   },
 
@@ -96,7 +106,7 @@ const IMAGES = [
     src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
     thumbnail:
       "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
-    thumbnailWidth: 320,
+    thumbnailWidth: 350,
     thumbnailHeight: 212
   },
 
@@ -104,7 +114,7 @@ const IMAGES = [
     src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
     thumbnail:
       "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
-    thumbnailWidth: 320,
+    thumbnailWidth: 350,
     thumbnailHeight: 212
   },
 
@@ -112,7 +122,7 @@ const IMAGES = [
     src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
     thumbnail:
       "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
-    thumbnailWidth: 320,
+    thumbnailWidth: 350,
     thumbnailHeight: 212
   },
 
@@ -120,23 +130,7 @@ const IMAGES = [
     src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
     thumbnail:
       "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
-    thumbnailWidth: 320,
-    thumbnailHeight: 212
-  },
-
-  {
-    src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
-    thumbnail:
-      "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
-    thumbnailWidth: 320,
-    thumbnailHeight: 212
-  },
-
-  {
-    src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
-    thumbnail:
-      "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
-    thumbnailWidth: 320,
+    thumbnailWidth: 350,
     thumbnailHeight: 212
   }
 ];
@@ -150,6 +144,16 @@ const EVALUATIONS = [
   {
     name: " Maurício Nunes",
     grade: 4,
+    opinion: "É simplesmente uma simulação de texto da indústria"
+  },
+  {
+    name: " Maurício Nunes",
+    grade: 4,
+    opinion: "É simplesmente uma simulação de texto da indústria"
+  },
+  {
+    name: "Helena Soares",
+    grade: 5,
     opinion: "É simplesmente uma simulação de texto da indústria"
   }
 ];

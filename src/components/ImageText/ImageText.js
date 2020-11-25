@@ -1,7 +1,6 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
 import styled from "styled-components";
-import { Box, Grid } from "@material-ui/core";
+import { Box, Container, Grid } from "@material-ui/core";
 import TitleFreud from "components/Typography/TitleFreud";
 
 const Description = styled.p`
@@ -9,8 +8,26 @@ const Description = styled.p`
   margin-top: 20px;
   font-size: 16px;
 `;
-// core components
-// const useStyles = makeStyles(styles);
+
+const StyledAlign = styled.div`
+margin-right: 20px;
+margin-left: 20px;
+@media (min-width: 576px){
+  padding: 40px;
+}
+@media (min-width: 768px){
+  padding: 40px;
+}
+@media (min-width: 960px) {
+  padding: 0px;
+  ${props => (props.align && `padding-${props.align}: 35px`)};
+}
+@media (min-width: 1200px){
+  padding: 0px;
+  ${props => (props.align && `padding-${props.align}: 100px`)};
+}
+`
+
 const ImageField = ({ image }) => {
   return (
     <Grid item xs={12} md={6}>
@@ -19,33 +36,23 @@ const ImageField = ({ image }) => {
   );
 };
 
-const TextField = ({ title, children }) => {
+const TextField = ({ title, children, rightImage }) => {
   return (
     <Grid item xs={12} md={5}>
-      <Box ml={3} mr={3}>
+      <StyledAlign align={!rightImage ? 'right' : 'left'}>
         <TitleFreud soft title={title} />
         <Description>{children}</Description>
-      </Box>
+      </StyledAlign>
     </Grid>
   );
 };
 
-const ImageText = ({ title, image, children, rightImage = false }) => {
-  // const classes = useStyles();
+const ImageText = ({ title, image, children, rightImage = false, noPaddingBottom = false }) => {
   return (
-    <Box pt={10} pb={10}>
-      <Grid container justify={!rightImage ? "flex-start" : "flex-end"}>
-        {!rightImage ? (
-          <ImageField image={image} />
-        ) : (
-          <TextField title={title}>{children} </TextField>
-        )}
-
-        {!rightImage ? (
-          <TextField title={title}>{children} </TextField>
-        ) : (
-          <ImageField image={image} />
-        )}
+    <Box pt={10} pb={noPaddingBottom ? 0 : 10}>
+      <Grid container direction={rightImage ? "row-reverse" : "row"}>
+        <ImageField image={image} />
+        <TextField title={title} rightImage={rightImage}>{children} </TextField>
       </Grid>
     </Box>
   );

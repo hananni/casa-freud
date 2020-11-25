@@ -5,22 +5,34 @@ import styles from "assets/jss/material-kit-react/views/componentsSections/basic
 import CardFeature from "../CardFeature/CardFeature";
 import { Grid } from "@material-ui/core";
 import { FEATURES } from "common-data";
+import styled from "styled-components";
+import { devices } from "responsive";
 
 const useStyles = makeStyles(styles);
 
-const SectionFeatures = () => {
+const StyledGrid = styled(Grid)`
+@media ${devices.xs} { 
+  padding-top: 64px;
+}
+
+@media ${devices.md} {
+  padding: 20px;
+}
+`
+
+const SectionFeatures = ({ ids = [1, 2, 3] }) => {
   const classes = useStyles();
 
   return (
     <div className={classes.container}>
-      <Grid container spacing={5}>
-        {FEATURES.map(feature => {
+      <Grid container justify="center">
+        {FEATURES.filter(feature => ids.includes(feature.id)).map(feature => {
           return (
-            <Grid item sm={4} key={feature.title}>
+            <StyledGrid item md={4} key={feature.title}>
               <CardFeature title={feature.title} link={feature.link}>
                 {feature.description}
               </CardFeature>
-            </Grid>
+            </StyledGrid>
           );
         })}
       </Grid>

@@ -86,14 +86,14 @@ const Footer = props => {
               </Box>
             </Grid>
             <Grid item xs={12} md={6}>
-              <Box pr={10} pl={10} mt={2} align="right">
-                <Button justIcon color="facebook">
+              <Box pr={10} pl={10} mt={5} align="right">
+                <Button justIcon color="facebook" size={'sm'}>
                   <i className={classes.socials + " fab fa-instagram"} />
                 </Button>
-                <Button justIcon color="facebook">
+                <Button justIcon color="facebook" size={'sm'}>
                   <i className={classes.socials + " fab fa-facebook-square"} />
                 </Button>
-                <Button justIcon color="facebook">
+                <Button justIcon color="facebook" size={'sm'}>
                   <i className={classes.socials + " fab fa-whatsapp"} />
                 </Button>
               </Box>

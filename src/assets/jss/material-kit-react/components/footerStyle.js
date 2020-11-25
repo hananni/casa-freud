@@ -78,10 +78,9 @@ const footerStyle = makeStyles(theme => ({
     flex: 1
   },
   iconButton: {
-    padding: 10,
+    padding: 8,
     backgroundColor: "#005AAA",
     borderRadius: 0,
-    padding: 15
   },
   divider: {
     height: 28,

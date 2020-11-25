@@ -2,29 +2,46 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 
 import styles from "assets/jss/material-kit-react/views/componentsSections/basicsStyle.js";
-import { Grid, Box } from "@material-ui/core";
+import { Box } from "@material-ui/core";
 import CardEvaluation from "./CardEvaluation";
 import { EVALUATIONS } from "common-data";
+import Carousel from "react-slick";
 
 const useStyles = makeStyles(styles);
 
 const SectionEvaluation = ({ noMarginTop = false }) => {
   const classes = useStyles();
-
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    autoplay: false,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
   return (
     <Box mt={noMarginTop ? 0 : 8} p={10} className={classes.freudBg}>
       <Box className={classes.container}>
-        <Grid container spacing={4}>
+        <Carousel {...settings}>
           {EVALUATIONS.map(evaluation => {
             return (
-              <Grid item key={evaluation.name} xs={12} sm={6}>
-                <CardEvaluation name={evaluation.name} grade={evaluation.grade}>
-                  {evaluation.opinion}
-                </CardEvaluation>
-              </Grid>
+              <CardEvaluation key={evaluation.name} name={evaluation.name} grade={evaluation.grade}>
+                {evaluation.opinion}
+              </CardEvaluation>
             );
           })}
-        </Grid>
+
+        </Carousel>
       </Box>
     </Box>
   );

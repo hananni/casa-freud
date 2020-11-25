@@ -29,6 +29,7 @@ ReactDOM.render(
       <Route path="/agenda" component={Agenda} />
       <Route path="/clinica" component={Clinica} />
       <Route path="/contato" component={Contato} />
+      <Route path="/" component={Components} />
     </Switch>
   </Router>,
   document.getElementById("root")
