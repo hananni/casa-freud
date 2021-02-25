@@ -1,16 +1,14 @@
-import React from "react";
-import SectionFeatures from "../../components/SectionFeatures/SectionFeatures";
-import SectionCourses from "components/SectionCourses/SectionCourses.js";
-import SectionGallery from "./Sections/SectionGallery.js";
-import SectionEvaluation from "components/SectionEvalutation/SectionEvaluation.js";
-import SlideHome from "./Sections/SlideHome";
-import Layout from "views/Layout";
+import React from 'react';
+import SectionFeatures from '../../components/SectionFeatures/SectionFeatures';
+import SectionCourses from 'components/SectionCourses/SectionCourses.js';
+import SectionGallery from './Sections/SectionGallery.js';
+import SectionEvaluation from 'components/SectionEvalutation/SectionEvaluation.js';
+import SlideHome from './Sections/SlideHome';
+import Layout from 'views/Layout';
 
 const getParallaxContent = () => {
-  return (
-    <SlideHome />
-  )
-}
+  return <SlideHome />;
+};
 
 const Home = () => {
   return (
@@ -21,6 +19,6 @@ const Home = () => {
       <SectionEvaluation />
     </Layout>
   );
-}
+};
 
-export default Home; 
+export default Home;

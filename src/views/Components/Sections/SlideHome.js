@@ -1,11 +1,46 @@
-import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import styles from "assets/jss/material-kit-react/views/componentsSections/basicsStyle.js";
-import { Box } from "@material-ui/core";
-import { COURSES } from "common-data";
-import Carousel from "react-slick";
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import styles from 'assets/jss/material-kit-react/views/componentsSections/basicsStyle.js';
+import { Box, Grid } from '@material-ui/core';
+import { COURSES } from 'common-data';
+import Carousel from 'react-slick';
+import styled from 'styled-components';
 
 const useStyles = makeStyles(styles);
+
+const BigBlue = styled.div`
+  color: #fff;
+  background-image: -webkit-linear-gradient(-45deg, #005aaa70 65%, #ffffff00 72%);
+  text-align: right;
+  padding-right: 25px;
+  font-size: 13px;
+  font-weight: 500;
+  font-style: italic;
+  display: flex;
+  height: 250px;
+  max-width: 70%;
+`;
+
+const SliderWrapper = styled.div`
+  max-width: 300px;
+  margin-top: 30px;
+`;
+
+const KnowMoreWrapper = styled.div`
+  margin-left: auto;
+`;
+
+const KnowMore = styled.div`
+  color: #fff;
+  background-image: -webkit-linear-gradient(-45deg, #005aaa 75%, #ffffff00 10%);
+  text-align: right;
+  padding-right: 30px;
+  padding-left: 5px;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 500;
+  font-style: italic;
+`;
 
 const SectionCourses = () => {
   const classes = useStyles();
@@ -45,17 +80,26 @@ const SectionCourses = () => {
     ],
   };
   return (
-    <Box mt={8} className={classes.container}>
-      <Carousel {...settings}>
-        {COURSES.map((course) => {
-          return (
-            <div>
-              <img width="300px" src={course.image} />
-            </div>
-          );
-        })}
-      </Carousel>
-    </Box>
+    <Grid container alignItems="center" style={{ height: '60vh' }}>
+      <Box className={classes.container}>
+        <BigBlue>
+          <SliderWrapper>
+            <Carousel {...settings}>
+              {COURSES.map(course => {
+                return (
+                  <div>
+                    <img width="300px" src={course.image} />
+                  </div>
+                );
+              })}
+            </Carousel>
+          </SliderWrapper>
+          <KnowMoreWrapper>
+            <KnowMore>Leia Mais</KnowMore>
+          </KnowMoreWrapper>
+        </BigBlue>
+      </Box>
+    </Grid>
   );
 };
 
