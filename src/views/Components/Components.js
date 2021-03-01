@@ -1,6 +1,6 @@
 import React from 'react';
 import SectionFeatures from '../../components/SectionFeatures/SectionFeatures';
-import SectionCourses from 'components/SectionCourses/SectionCourses.js';
+import SectionCourses from '../../components/SectionCourses/SectionCourses';
 import SectionGallery from './Sections/SectionGallery.js';
 import SectionEvaluation from 'components/SectionEvalutation/SectionEvaluation.js';
 import SlideHome from './Sections/SlideHome';
