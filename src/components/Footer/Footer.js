@@ -1,30 +1,21 @@
 /*eslint-disable*/
-import React from "react";
+import React from 'react';
 // nodejs library to set properties for components
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 // nodejs library that concatenates classes
-import classNames from "classnames";
+import classNames from 'classnames';
 // material-ui core components
-import {
-  List,
-  ListItem,
-  Grid,
-  Box,
-  InputBase,
-  IconButton,
-  Paper,
-  Divider
-} from "@material-ui/core";
-import logo from "../../assets/img/logorodape.png";
+import { List, ListItem, Grid, Box, InputBase, IconButton, Paper, Divider } from '@material-ui/core';
+import logo from '../../assets/img/logorodape.png';
 // @material-ui/icons
-import Favorite from "@material-ui/icons/Favorite";
-import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
-import useStyles from "assets/jss/material-kit-react/components/footerStyle.js";
-import { styled } from "@material-ui/styles";
-import Button from "../CustomButtons/Button.js";
+import Favorite from '@material-ui/icons/Favorite';
+import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
+import useStyles from 'assets/jss/material-kit-react/components/footerStyle.js';
+import { styled } from '@material-ui/styles';
+import Button from '../CustomButtons/Button.js';
 
 const MyArrow = styled(ArrowForwardIcon)({
-  color: "white"
+  color: 'white',
 });
 
 const Footer = props => {
@@ -32,11 +23,11 @@ const Footer = props => {
   const { whiteFont } = props;
   const footerClasses = classNames({
     [classes.footer]: true,
-    [classes.footerWhiteFont]: whiteFont
+    [classes.footerWhiteFont]: whiteFont,
   });
   const aClasses = classNames({
     [classes.a]: true,
-    [classes.footerWhiteFont]: whiteFont
+    [classes.footerWhiteFont]: whiteFont,
   });
   return (
     <div>
@@ -54,25 +45,16 @@ const Footer = props => {
             <Grid item xs={12} md={6}>
               <Box pr={10} pl={10} mt={5}>
                 <div className={classes.newsletter}>Newsletter</div>
-                <div className={classes.descriptionNewsletter}>
-                  Fique atualizado com as nossas últimas Notícias
-                </div>
+                <div className={classes.descriptionNewsletter}>Fique atualizado com as nossas últimas Notícias</div>
                 <Box mt={2}>
                   <Paper component="form" className={classes.root}>
                     <InputBase
                       className={classes.input}
                       placeholder="Envie seu Email"
-                      inputProps={{ "aria-label": "envie email" }}
+                      inputProps={{ 'aria-label': 'envie email' }}
                     />
-                    <Divider
-                      className={classes.divider}
-                      orientation="vertical"
-                    />
-                    <IconButton
-                      color="primary"
-                      className={classes.iconButton}
-                      aria-label="directions"
-                    >
+                    <Divider className={classes.divider} orientation="vertical" />
+                    <IconButton color="primary" className={classes.iconButton} aria-label="directions">
                       <MyArrow />
                     </IconButton>
                   </Paper>
@@ -81,20 +63,19 @@ const Footer = props => {
             </Grid>
             <Grid item xs={12} md={6}>
               <Box ml={10} mr={10} mt={5} mb={5} className={classes.copyright}>
-                ©2020 Casa Freud | Desenvolvido por Nathalia Cecílio e Lucas
-                Hannani
+                ©2021 Casa Freud | Desenvolvido por Nathalia Cecílio e Lucas Hannani
               </Box>
             </Grid>
             <Grid item xs={12} md={6}>
               <Box pr={10} pl={10} mt={5} align="right">
                 <Button justIcon color="facebook" size={'sm'}>
-                  <i className={classes.socials + " fab fa-instagram"} />
+                  <i className={classes.socials + ' fab fa-instagram'} />
                 </Button>
                 <Button justIcon color="facebook" size={'sm'}>
-                  <i className={classes.socials + " fab fa-facebook-square"} />
+                  <i className={classes.socials + ' fab fa-facebook-square'} />
                 </Button>
                 <Button justIcon color="facebook" size={'sm'}>
-                  <i className={classes.socials + " fab fa-whatsapp"} />
+                  <i className={classes.socials + ' fab fa-whatsapp'} />
                 </Button>
               </Box>
             </Grid>
@@ -106,7 +87,7 @@ const Footer = props => {
 };
 
 Footer.propTypes = {
-  whiteFont: PropTypes.bool
+  whiteFont: PropTypes.bool,
 };
 
 export default Footer;
