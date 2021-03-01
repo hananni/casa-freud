@@ -1,10 +1,10 @@
-import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import styles from "assets/jss/material-kit-react/views/componentsSections/basicsStyle.js";
-import { Grid, Box } from "@material-ui/core";
-import TitleFreud from "components/Typography/TitleFreud";
-import { PROFESSORS } from "quem-somos-data";
-import CardProfessor from "./CardProfessor";
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import styles from 'assets/jss/material-kit-react/views/componentsSections/basicsStyle.js';
+import { Grid, Box } from '@material-ui/core';
+import TitleFreud from 'components/Typography/TitleFreud';
+import { PROFESSORS } from 'quem-somos-data';
+import CardProfessor from './CardProfessor';
 
 const useStyles = makeStyles(styles);
 
@@ -17,15 +17,12 @@ const SectionProfessors = () => {
         <Box mb={4}>
           <TitleFreud soft title="Quadro de Professores" center />
         </Box>
-        <div className={classes.container} style={{ display: "grid" }}>
+        <div className={classes.container} style={{ display: 'grid' }}>
           <Grid container spacing={5}>
             {PROFESSORS.map(professor => {
               return (
-                <Grid item sm={12} md={6} key={professor.title}>
-                  <CardProfessor
-                    title={professor.title}
-                    image={professor.image}
-                  >
+                <Grid item sm={12} md={12} key={professor.title}>
+                  <CardProfessor title={professor.title} image={professor.image}>
                     {professor.description}
                   </CardProfessor>
                 </Grid>

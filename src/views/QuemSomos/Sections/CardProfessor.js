@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import { Box, Grid, Typography } from "@material-ui/core";
+import React from 'react';
+import styled from 'styled-components';
+import { Box, Grid, Typography } from '@material-ui/core';
 
 const Card = styled.div`
   background-color: #fff;
@@ -14,9 +14,9 @@ const Title = styled.p`
 
 const KnowMore = styled.div`
   color: #fff;
-  background-image: -webkit-linear-gradient(-45deg, #005AAA 90%, #ffffff00 10%);
+  background-image: -webkit-linear-gradient(-45deg, #005aaa 90%, #ffffff00 10%);
   text-align: right;
-  padding-right: 25px;
+  padding-right: 50px;
   font-size: 13px;
   font-weight: 500;
   font-style: italic;
@@ -25,7 +25,7 @@ const KnowMore = styled.div`
 const CustomIcon = styled.i`
   padding: 0px 5px 0 5px;
   font-size: 18px;
-  color: #005AAA;
+  color: #005aaa;
   text-align: right;
   cursor: pointer;
 `;
@@ -37,19 +37,19 @@ const CardProfessor = ({ image, title, children, whatsapp, instagram }) => {
         <Grid item xs={4}>
           <img src={image} width="100%" />
         </Grid>
-        <Grid item xs={8} style={{ position: "relative" }}>
+        <Grid item xs={8} style={{ position: 'relative' }}>
           <Box p={3}>
             <Title>{title}</Title>
             <Box mt={2}>{children}</Box>
           </Box>
-          <Grid container style={{ position: "absolute", bottom: 0 }}>
+          <Grid container style={{ position: 'absolute', bottom: 0 }}>
             <Grid item xs={8}>
               <KnowMore>SAIBA MAIS</KnowMore>
             </Grid>
             <Grid item xs={4}>
               <Typography align="right">
-                <CustomIcon href={instagram} className={" fab fa-instagram"} />
-                <CustomIcon href={whatsapp} className={" fab fa-whatsapp"} />
+                <CustomIcon href={instagram} className={' fab fa-instagram'} />
+                <CustomIcon href={whatsapp} className={' fab fa-whatsapp'} />
               </Typography>
             </Grid>
           </Grid>
