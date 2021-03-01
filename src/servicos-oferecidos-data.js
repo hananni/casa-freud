@@ -15,16 +15,16 @@ const INTRO_TEXT =
 
 const SERVICES = [
   {
-    title: ' Formação em Psicanálise',
-    description:
-      'O curso de Formação em Psicanálise tem como objetivo oferecer um espaço de transmissão da psicanálise, onde o estudo cuidadoso da obra de Freud e dos pós-freudianos é considerado fundamental para criar uma base sólida para a intervenção clínica. Está aberto a profissionais da psicologia, medicina ou demais áreas abrangidas pelos interesses terapêuticos da psicanálise.',
-    image: psicanalise,
-  },
-  {
     title: ' Curso de Extensão ',
     description:
       'Os cursos de extensão são cursos de breve duração e direcionados a temas específicos, são abertos a profissionais e estudantes de qualquer área que queiram iniciar e aprofundar seus estudos sobre psicanálise. ',
     image: psicaead,
+  },
+  {
+    title: ' Formação em Psicanálise',
+    description:
+      'O curso de Formação em Psicanálise tem como objetivo oferecer um espaço de transmissão da psicanálise, onde o estudo cuidadoso da obra de Freud e dos pós-freudianos é considerado fundamental para criar uma base sólida para a intervenção clínica. Está aberto a profissionais da psicologia, medicina ou demais áreas abrangidas pelos interesses terapêuticos da psicanálise.',
+    image: psicanalise,
   },
   {
     title: ' Grupos de estudo',
