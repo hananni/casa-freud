@@ -1,10 +1,11 @@
-import React from "react";
-import styled from "styled-components";
-import { Box, Grid, Typography } from "@material-ui/core";
+import React from 'react';
+import styled from 'styled-components';
+import { Box, Grid, Typography } from '@material-ui/core';
 
 const Card = styled.div`
   background-color: #fff;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  min-height: 100%;
 `;
 
 const Title = styled.p`
@@ -28,14 +29,13 @@ const CardService = ({ image, title, children, whatsapp, instagram }) => {
     <Card>
       <Grid container>
         <Grid item xs={12}>
-          <img src={image} width="100%" style={{ maxHeight: "280px" }} />
+          <img src={image} width="100%" style={{ maxHeight: '280px' }} />
         </Grid>
-        <Grid item xs={12} style={{ position: "relative" }}>
+        <Grid item xs={12} style={{ position: 'relative' }}>
           <Box p={2}>
             <Title>{title}</Title>
             <Box mt={1}>{children}</Box>
           </Box>
-          <KnowMore>LEIA MAIS</KnowMore>
         </Grid>
       </Grid>
     </Card>
