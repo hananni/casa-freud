@@ -1,15 +1,15 @@
-import React from "react";
+import React from 'react';
 // nodejs library that concatenates classes
-import classNames from "classnames";
+import classNames from 'classnames';
 // nodejs library to set properties for components
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 // @material-ui/core components
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from '@material-ui/core/styles';
 
 // core components
-import styles from "assets/jss/material-kit-react/components/parallaxStyle.js";
-import logo from "assets/img/logorcabeca.png";
-import { Container, Box } from "@material-ui/core";
+import styles from 'assets/jss/material-kit-react/components/parallaxStyle.js';
+import logo from 'assets/img/logorcabeca.png';
+import { Box } from '@material-ui/core';
 const useStyles = makeStyles(styles);
 
 const Parallax = props => {
@@ -42,27 +42,28 @@ const Parallax = props => {
     [classes.parallax]: true,
     [classes.filter]: filter,
     [classes.small]: small,
-    [className]: className !== undefined
+    [className]: className !== undefined,
   });
   return (
     <div
       className={parallaxClasses}
       style={{
         ...style,
-        height: props.home ? "100vh" : "55vh",
-        backgroundImage: "url(" + image + ")",
-        backgroundAttachment: "fixed"
+        height: props.home ? '100vh' : '55vh',
+        minHeight: '450px',
+        backgroundImage: 'url(' + image + ')',
+        backgroundAttachment: 'fixed',
         // transform: transform
       }}
     >
-      <div style={{ display: "block" }}>
+      <div style={{ display: 'block' }}>
         <div className={classes.container}>
           <Box mt={14}>
-            <img src={logo} />
+            <img alt="logo" src={logo} />
           </Box>
         </div>
       </div>
-      <div style={{ display: "flex" }}>{children}</div>
+      <div style={{ display: 'flex' }}>{children}</div>
     </div>
   );
 };
@@ -73,7 +74,7 @@ Parallax.propTypes = {
   children: PropTypes.node,
   style: PropTypes.string,
   image: PropTypes.string,
-  small: PropTypes.bool
+  small: PropTypes.bool,
 };
 
 export default Parallax;

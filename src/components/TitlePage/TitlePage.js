@@ -1,8 +1,7 @@
-import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import styled from "styled-components";
-import { Typography, Box, Grid } from "@material-ui/core";
-import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
+import React from 'react';
+import styled from 'styled-components';
+import { Grid } from '@material-ui/core';
+import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 const Title = styled.p`
   color: #fff;
   text-align: center;

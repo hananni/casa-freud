@@ -88,7 +88,7 @@ const SectionCourses = () => {
               {COURSES.map(course => {
                 return (
                   <div>
-                    <img width="300px" src={course.image} />
+                    <img width="300px" src={course.image} alt="courseimg" />
                   </div>
                 );
               })}

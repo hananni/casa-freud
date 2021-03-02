@@ -10,13 +10,20 @@ import { devices } from 'responsive';
 
 const useStyles = makeStyles(styles);
 
-const StyledGrid = styled(Grid)`
-  @media ${devices.xs} {
-    padding-top: 64px;
+const StyledGridContainer = styled(Grid)`
+  @media ${devices.md} {
+    margin: 0px -20px !important;
   }
 
-  @media ${devices.md} {
-    padding: 20px;
+  @media ${devices.smMax} {
+    max-width: 100%;
+    margin: 0px !important;
+  }
+`;
+
+const StyledGrid = styled(Grid)`
+  @media ${devices.smMax} {
+    margin-top: 64px !important;
   }
 `;
 
@@ -25,7 +32,7 @@ const SectionFeatures = ({ ids = [1, 2, 3] }) => {
 
   return (
     <div className={classes.container}>
-      <Grid container justify="center" spacing={5} style={{ margin: '0px -20px' }}>
+      <StyledGridContainer container justify="center" spacing={5}>
         {FEATURES.filter(feature => ids.includes(feature.id)).map(feature => {
           return (
             <StyledGrid item md={4} key={feature.title}>
@@ -35,7 +42,7 @@ const SectionFeatures = ({ ids = [1, 2, 3] }) => {
             </StyledGrid>
           );
         })}
-      </Grid>
+      </StyledGridContainer>
     </div>
   );
 };

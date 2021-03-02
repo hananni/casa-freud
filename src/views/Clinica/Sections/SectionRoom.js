@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import styles from 'assets/jss/material-kit-react/views/componentsSections/basicsStyle.js';
-import { Grid, Box, Typography } from '@material-ui/core';
+import { Grid, Box } from '@material-ui/core';
 import TitleFreud from 'components/Typography/TitleFreud';
 import room from 'assets/img/room.jpg';
 import styled from 'styled-components';
@@ -35,7 +35,7 @@ const SectionRoom = () => {
           </Box>
           <Grid container>
             <Grid item xs={12}>
-              <img src={room} width="100%" />
+              <img alt="room" src={room} width="100%" />
             </Grid>
             <Grid item xs={12}>
               <WhiteField>

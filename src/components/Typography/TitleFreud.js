@@ -1,25 +1,17 @@
-import React from "react";
-// nodejs library to set properties for components
-import PropTypes from "prop-types";
-// @material-ui/core components
-import { makeStyles } from "@material-ui/core/styles";
-// core components
-import styles from "assets/jss/material-kit-react/components/typographyStyle.js";
-import { Grid } from "@material-ui/core";
-import styled from "styled-components";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Grid } from '@material-ui/core';
+import styled from 'styled-components';
 
 const Title = styled.p`
   color: ${props => props.color};
   font-style: ${props => props.fontStyle};
   font-size: 35px;
-  margin-bottom: ${props => (props.marginBottom ? props.marginBottom : "0px")};
-  font-weight: ${props => (props.soft ? "400" : "600")};
+  margin-bottom: ${props => (props.marginBottom ? props.marginBottom : '0px')};
+  font-weight: ${props => (props.soft ? '400' : '600')};
 
-  text-align: ${props =>
-    props.center ? "center" : props.right ? "right" : "left"};
+  text-align: ${props => (props.center ? 'center' : props.right ? 'right' : 'left')};
 `;
-
-const useStyles = makeStyles(styles);
 
 export default function TitleFreud({
   title,
@@ -27,11 +19,10 @@ export default function TitleFreud({
   soft,
   center,
   right,
-  color = "#000",
+  color = '#000',
   marginBottom,
-  fontStyle = "normal"
+  fontStyle = 'normal',
 }) {
-  const classes = useStyles();
   return (
     <Grid container>
       <Grid item xs={12}>
@@ -51,5 +42,5 @@ export default function TitleFreud({
 }
 
 TitleFreud.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
 };

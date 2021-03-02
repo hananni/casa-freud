@@ -35,7 +35,7 @@ const CardProfessor = ({ image, title, children, whatsapp, instagram }) => {
     <Card>
       <Grid container>
         <Grid item xs={4}>
-          <img src={image} width="100%" />
+          <img alt={title} src={image} width="100%" />
         </Grid>
         <Grid item xs={8} style={{ position: 'relative' }}>
           <Box p={3}>

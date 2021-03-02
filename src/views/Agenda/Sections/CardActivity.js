@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import { Box, Grid, Typography } from "@material-ui/core";
+import React from 'react';
+import styled from 'styled-components';
+import { Box, Grid } from '@material-ui/core';
 
 const Card = styled.div`
   background-color: #fff;
@@ -44,15 +44,15 @@ const CardActivity = ({ image, title, subtitle, description, date }) => {
     <Card>
       <Grid container>
         <Grid item xs={12} sm={7}>
-          <img src={image} width="100%" />
+          <img src={image} width="100%" alt={title} />
         </Grid>
-        <Grid item xs={12} sm={5} style={{ position: "relative" }}>
+        <Grid item xs={12} sm={5} style={{ position: 'relative' }}>
           <Box p={3}>
             <Title>{title}</Title>
             <SubTitle>{subtitle}</SubTitle>
             <Description>{description}</Description>
           </Box>
-          <Grid container style={{ position: "absolute", bottom: 0 }}>
+          <Grid container style={{ position: 'absolute', bottom: 0 }}>
             <Grid item xs={12}>
               <DateTime>{date}</DateTime>
             </Grid>

@@ -1,12 +1,11 @@
-import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import styles from "assets/jss/material-kit-react/views/componentsSections/basicsStyle.js";
-import { Grid, Box, Typography } from "@material-ui/core";
-import TitleFreud from "components/Typography/TitleFreud";
-import { PROFESSORS } from "quem-somos-data";
-import CardService from "./CardService";
-import { INTRO_TEXT } from "servicos-oferecidos-data";
-import { SERVICES } from "servicos-oferecidos-data";
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import styles from 'assets/jss/material-kit-react/views/componentsSections/basicsStyle.js';
+import { Grid, Box, Typography } from '@material-ui/core';
+import TitleFreud from 'components/Typography/TitleFreud';
+import CardService from './CardService';
+import { INTRO_TEXT } from 'servicos-oferecidos-data';
+import { SERVICES } from 'servicos-oferecidos-data';
 
 const useStyles = makeStyles(styles);
 
@@ -16,7 +15,7 @@ const SectionServices = () => {
   return (
     <Box pt={5} pb={5}>
       <div className={classes.section}>
-        <div className={classes.container} style={{ display: "grid" }}>
+        <div className={classes.container} style={{ display: 'grid' }}>
           <Box m={4} mb={5}>
             <Typography align="center">{INTRO_TEXT}</Typography>
           </Box>

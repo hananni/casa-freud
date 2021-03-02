@@ -11,12 +11,6 @@ const cardStyle = {
     marginTop: '-64px',
     textAlign: 'center',
   },
-  header: {
-    backgroundColor: '#1667b147',
-    color: '#fff',
-    fontWeight: 800,
-    padding: 10,
-  },
   body: {
     padding: 20,
     color: 'rgba(0, 0, 0, 0.87)',

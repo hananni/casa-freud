@@ -1,11 +1,10 @@
-import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Gallery from "react-grid-gallery";
-import GridContainer from "components/Grid/GridContainer.js";
-import styles from "assets/jss/material-kit-react/views/componentsSections/basicsStyle.js";
-import { Grid, Box } from "@material-ui/core";
-import TitleFreud from "components/Typography/TitleFreud";
-import { IMAGES } from "common-data";
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Gallery from 'react-grid-gallery';
+import styles from 'assets/jss/material-kit-react/views/componentsSections/basicsStyle.js';
+import { Box } from '@material-ui/core';
+import TitleFreud from 'components/Typography/TitleFreud';
+import { IMAGES } from 'common-data';
 
 const useStyles = makeStyles(styles);
 
@@ -18,7 +17,7 @@ export default function SectionGallery() {
         <Box mb={4}>
           <TitleFreud title="Galeria" center />
         </Box>
-        <div className={classes.container} style={{ display: "grid" }}>
+        <div className={classes.container} style={{ display: 'grid' }}>
           <Gallery enableImageSelection={false} images={IMAGES} />
         </div>
       </div>
