@@ -30,77 +30,74 @@ const COURSES = [
     title: 'Formação em Psicanálise',
     description: 'O curso tem como objetivo oferecer um espaço de transmissão da psicanálise.',
     link: '',
-    image: 'https://meusonhar.com.br/wp-content/uploads/2014/08/sonhar-estudando.jpg',
+    image: require('assets/img/psicanalise.jpg'),
   },
   {
     title: 'Curso de Extensão ',
     description: 'Os cursos de extensão são cursos de breve duração e direcionados a temas específicos.',
     link: '',
-    image: 'https://meusonhar.com.br/wp-content/uploads/2014/08/sonhar-estudando.jpg',
+    image: require('assets/img/psicanalise-ead.JPG'),
   },
   {
     title: 'Grupos de Estudos',
     description: 'Proporciona um espaço para discutir os fundamentos da teoria e da técnica psicanalítica.',
     link: '',
-    image: 'https://meusonhar.com.br/wp-content/uploads/2014/08/sonhar-estudando.jpg',
+    image: require('assets/img/clinica.JPG'),
   },
 ];
 
 const IMAGES = [
   {
-    src: 'https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg',
-    thumbnail: 'https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_n.jpg',
+    src: require('assets/img/bg.jpg'),
+    thumbnail: require('assets/img/bg.jpg'),
     thumbnailWidth: 350,
     thumbnailHeight: 212,
-    caption: 'After Rain (Jeshu John - designerspics.com)',
   },
   {
-    src: 'https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg',
-    thumbnail: 'https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg',
-    thumbnailWidth: 350,
-    thumbnailHeight: 212,
-    tags: [{ value: 'Ocean', title: 'Ocean' }, { value: 'People', title: 'People' }],
-    caption: 'Boats (Jeshu John - designerspics.com)',
-  },
-
-  {
-    src: 'https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg',
-    thumbnail: 'https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg',
+    src: require('assets/img/bg3.1.jpg'),
+    thumbnail: require('assets/img/bg3.1.jpg'),
     thumbnailWidth: 350,
     thumbnailHeight: 212,
   },
 
   {
-    src: 'https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg',
-    thumbnail: 'https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg',
+    src: require('assets/img/bg6.jpg'),
+    thumbnail: require('assets/img/bg6.jpg'),
     thumbnailWidth: 350,
     thumbnailHeight: 212,
   },
 
   {
-    src: 'https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg',
-    thumbnail: 'https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg',
+    src: require('assets/img/bg5.jpg'),
+    thumbnail: require('assets/img/bg5.jpg'),
     thumbnailWidth: 350,
     thumbnailHeight: 212,
   },
 
   {
-    src: 'https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg',
-    thumbnail: 'https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg',
+    src: require('assets/img/bg2.jpg'),
+    thumbnail: require('assets/img/bg2.jpg'),
     thumbnailWidth: 350,
     thumbnailHeight: 212,
   },
 
   {
-    src: 'https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg',
-    thumbnail: 'https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg',
+    src: require('assets/img/bg7.jpg'),
+    thumbnail: require('assets/img/bg7.jpg'),
     thumbnailWidth: 350,
     thumbnailHeight: 212,
   },
 
   {
-    src: 'https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg',
-    thumbnail: 'https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg',
+    src: require('assets/img/bg8.jpg'),
+    thumbnail: require('assets/img/bg8.jpg'),
+    thumbnailWidth: 350,
+    thumbnailHeight: 212,
+  },
+
+  {
+    src: require('assets/img/bg9.jpg'),
+    thumbnail: require('assets/img/bg9.jpg'),
     thumbnailWidth: 350,
     thumbnailHeight: 212,
   },

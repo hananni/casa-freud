@@ -1,10 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import styles from 'assets/jss/material-kit-react/views/componentsSections/basicsStyle.js';
 import { Grid, Box } from '@material-ui/core';
-import TitleFreud from 'components/Typography/TitleFreud';
 import facade from 'assets/img/facade.JPG';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 const useStyles = makeStyles(styles);
 
@@ -14,8 +13,100 @@ const WhiteField = styled.div`
   text-align: center;
 `;
 
+const sharedStyles = css`
+  background-color: #eee;
+  height: 40px;
+  border: 1px solid #ddd;
+  margin: 10px 0 20px 0;
+  padding: 20px;
+  box-sizing: border-box;
+`;
+
+const StyledFormWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0 20px;
+`;
+
+const StyledForm = styled.form`
+  max-width: 700px;
+  padding: 40px;
+  background-color: #fff;
+  box-sizing: border-box;
+`;
+
+const StyledInput = styled.input`
+  display: block;
+  width: 100%;
+  ${sharedStyles}
+`;
+
+const StyledTextArea = styled.textarea`
+  background-color: #eee;
+  width: 100%;
+  min-height: 100px;
+  resize: none;
+  ${sharedStyles}
+`;
+
+const StyledButton = styled.button`
+  display: block;
+  background-color: #015aaa;
+  color: #fff;
+  font-size: 0.9rem;
+  border: 0;
+  height: 40px;
+  padding: 0 20px;
+  cursor: pointer;
+  box-sizing: border-box;
+`;
+
+const StyledError = styled.div`
+  color: red;
+  font-weight: 800;
+  margin: 0 0 40px 0;
+`;
+
+const initalState = {
+  name: '',
+  email: '',
+  subject: '',
+  message: '',
+};
+
 const SectionContato = () => {
   const classes = useStyles();
+
+  const [state, setState] = useState(initalState);
+  const [error, setError] = useState('');
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    console.log('enviado');
+    console.log(state);
+
+    for (let key in state) {
+      if (state[key] === '') {
+        setError(`Você não digitou seu ${key}`);
+        return;
+      }
+    }
+    setError('');
+    const regex = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+    const test = regex.test(state.email);
+    console.log(test);
+
+    console.log('enviado');
+  };
+
+  const handleInput = e => {
+    const inputName = e.currentTarget.name;
+    const value = e.currentTarget.value;
+
+    setState(prev => ({ ...prev, [inputName]: value }));
+  };
 
   return (
     <Box pt={5}>
@@ -27,11 +118,29 @@ const SectionContato = () => {
             </Grid>
             <Grid item xs={12}>
               <WhiteField>
-                <Box mt={10}>
-                  <TitleFreud title="FORM" center marginBottom="25px" />É simplesmente uma simulação de texto da
-                  indústria tipográfica e de impressos. É simplesmente uma simulação de texto da indústria tipográfica e
-                  de impressos. É simplesmente uma simulação de texto
-                </Box>
+                <h3>Rua Barão do Rio Branco, Nº 1481 St. Central, Anápolis GO</h3>
+                <h3>62 3771-7175</h3>
+                <h3>62 99347-3848</h3>
+                <h3>contato@casafreud.com.br</h3>
+                <StyledFormWrapper>
+                  <StyledForm onSubmit={handleSubmit}>
+                    <label htmlFor="name">Seu nome</label>
+                    <StyledInput type="text" name="name" value={state.name} onChange={handleInput} />
+                    <label htmlFor="email">Seu email</label>
+                    <StyledInput type="email" name="email" value={state.email} onChange={handleInput} />
+                    <label htmlFor="subject">Assunto</label>
+                    <StyledInput type="subject" name="subject" value={state.subject} onChange={handleInput} />
+                    <label htmlFor="message">Mensagem</label>
+                    <StyledTextArea name="message" value={state.message} onChange={handleInput} />
+                    {error && (
+                      <StyledError>
+                        <p>{error}</p>
+                      </StyledError>
+                    )}
+
+                    <StyledButton type="submit">Enviar Mensagem</StyledButton>
+                  </StyledForm>
+                </StyledFormWrapper>
               </WhiteField>
             </Grid>
           </Grid>

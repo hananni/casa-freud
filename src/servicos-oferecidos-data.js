@@ -37,27 +37,51 @@ const SERVICES = [
 const BOOKS = [
   {
     image: book1,
+    thumbnail: book1,
+    thumbnailWidth: 350,
+    thumbnailHeight: 212,
   },
   {
     image: book2,
+    thumbnail: book2,
+    thumbnailWidth: 350,
+    thumbnailHeight: 212,
   },
   {
     image: book3,
+    thumbnail: book3,
+    thumbnailWidth: 350,
+    thumbnailHeight: 212,
   },
   {
     image: book4,
+    thumbnail: book4,
+    thumbnailWidth: 350,
+    thumbnailHeight: 212,
   },
   {
     image: book5,
+    thumbnail: book5,
+    thumbnailWidth: 350,
+    thumbnailHeight: 212,
   },
   {
     image: book6,
+    thumbnail: book6,
+    thumbnailWidth: 350,
+    thumbnailHeight: 212,
   },
   {
     image: book7,
+    thumbnail: book7,
+    thumbnailWidth: 350,
+    thumbnailHeight: 212,
   },
   {
     image: book8,
+    thumbnail: book8,
+    thumbnailWidth: 350,
+    thumbnailHeight: 212,
   },
 ];
 
