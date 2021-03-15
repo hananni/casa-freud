@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Box, Grid } from '@material-ui/core';
+import { devices } from 'responsive';
 
 const Card = styled.div`
   background-color: #fff;
@@ -30,14 +31,26 @@ const CustomIcon = styled.i`
   cursor: pointer;
 `;
 
+const ProfessorPhoto = styled.img`
+  max-height: 315px;
+  @media ${devices.md} {
+    width: 100%;
+  }
+  @media ${devices.xs} {
+    max-width: 300px;
+  }
+  display: block;
+  margin: auto;
+`;
+
 const CardProfessor = ({ image, title, children, whatsapp, instagram }) => {
   return (
     <Card>
       <Grid container>
-        <Grid item xs={4}>
-          <img alt={title} src={image} width="100%" />
+        <Grid item xs={12} md={3}>
+          <ProfessorPhoto alt={title} src={image} />
         </Grid>
-        <Grid item xs={8} style={{ position: 'relative' }}>
+        <Grid item xs={12} md={9} style={{ position: 'relative' }}>
           <Box p={3}>
             <Title>{title}</Title>
             <Box mt={2}>{children}</Box>

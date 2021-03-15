@@ -1,17 +1,14 @@
-import React from "react";
-import SectionFeatures from "../../components/SectionFeatures/SectionFeatures";
-import TitlePage from "components/TitlePage/TitlePage";
-import ImageText from "components/ImageText/ImageText";
-import { WHO_WE_ARE, GOALS } from "../../quem-somos-data";
-import SectionProfessors from "./Sections/SectionProfessors";
-import Layout from "views/Layout";
+import React from 'react';
+import SectionFeatures from '../../components/SectionFeatures/SectionFeatures';
+import TitlePage from 'components/TitlePage/TitlePage';
+import ImageText from '../../components/ImageText/ImageText';
+import { WHO_WE_ARE, GOALS } from '../../quem-somos-data';
+import SectionProfessors from './Sections/SectionProfessors';
+import Layout from 'views/Layout';
 
 const getParallaxContent = () => {
-  return (
-    <TitlePage title="Quem somos" />
-  )
-}
-
+  return <TitlePage title="Quem somos" />;
+};
 
 const QuemSomos = () => {
   return (

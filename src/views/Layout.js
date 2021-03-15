@@ -20,7 +20,7 @@ const Layout = ({ headerHeight = 400, children, isHome = false, parallaxContent 
         fixed
         color="transparent"
         changeColorOnScroll={{
-          height: headerHeight,
+          height: 20,
           color: 'white',
         }}
       />

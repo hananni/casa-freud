@@ -53,7 +53,7 @@ const ImageText = ({ title, image, children, rightImage = false, noPaddingBottom
       <Grid container direction={rightImage ? 'row-reverse' : 'row'}>
         <ImageField image={image} />
         <TextField title={title} rightImage={rightImage}>
-          {children}{' '}
+          {children}
         </TextField>
       </Grid>
     </Box>
