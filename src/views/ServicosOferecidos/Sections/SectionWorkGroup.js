@@ -16,7 +16,7 @@ const WorkGroupBackground = styled.div`
 `;
 const KnowMore = styled.div`
   width: 80%;
-  color: #fff;
+  color: #005aaa;
   background-image: -webkit-linear-gradient(-45deg, #005aaa 90%, #ffffff00 10%);
   text-align: right;
   padding-right: 180px;
@@ -41,7 +41,9 @@ const SectionWorkGroup = () => {
                 style={{ color: '#fff', fontSize: '14px', fontWeight: '200', lineHeight: '1.3', paddingTop: '10px' }}
                 align="right"
               >
-                É simplesmente uma simulação <br /> de texto da indústria <br /> tipográfica e de impressos.
+                Um espaço para discutir os fundamentos,
+                <br /> realizar leituras e debates
+                <br /> acerca de questões da atualidade.
               </Typography>
             </Grid>
           </Grid>

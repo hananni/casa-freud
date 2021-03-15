@@ -84,7 +84,6 @@ const Header = props => {
           <Grid container alignItems="center">
             <Grid xs={4} item>
               <LogoIcon className={'fab fa-instagram'} />
-              <LogoIcon className={'fab fa-facebook-square'} />
               <LogoIcon className={'fab fa-whatsapp'} />
             </Grid>
             <Grid xs={8} item>

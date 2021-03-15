@@ -72,9 +72,6 @@ const Footer = props => {
                   <i className={classes.socials + ' fab fa-instagram'} />
                 </Button>
                 <Button justIcon color="facebook" size={'sm'}>
-                  <i className={classes.socials + ' fab fa-facebook-square'} />
-                </Button>
-                <Button justIcon color="facebook" size={'sm'}>
                   <i className={classes.socials + ' fab fa-whatsapp'} />
                 </Button>
               </Box>

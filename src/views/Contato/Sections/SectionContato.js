@@ -11,6 +11,7 @@ const WhiteField = styled.div`
   background-color: #fff
   padding: 40px;
   text-align: center;
+ width: 100%;
 `;
 
 const sharedStyles = css`
@@ -23,14 +24,16 @@ const sharedStyles = css`
 `;
 
 const StyledFormWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  padding: 0 20px;
+  padding: 5px;
+  max-width: 960px;
+  width: 95%;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 `;
 
 const StyledForm = styled.form`
+  width: 100%;
   max-width: 700px;
   padding: 40px;
   background-color: #fff;
@@ -67,6 +70,11 @@ const StyledError = styled.div`
   color: red;
   font-weight: 800;
   margin: 0 0 40px 0;
+`;
+
+const LogoIcon = styled.i`
+  margin: 5px 10px;
+  color: #015aaa;
 `;
 
 const initalState = {
@@ -118,11 +126,22 @@ const SectionContato = () => {
             </Grid>
             <Grid item xs={12}>
               <WhiteField>
-                <h3>Rua Barão do Rio Branco, Nº 1481 St. Central, Anápolis GO</h3>
-                <h3>62 3771-7175</h3>
-                <h3>62 99347-3848</h3>
-                <h3>contato@casafreud.com.br</h3>
                 <StyledFormWrapper>
+                  <h3>Rua Barão do Rio Branco, Nº 1481 St. Central, Anápolis GO</h3>
+                  <h3>
+                    {' '}
+                    <LogoIcon className={'far fa-phone'} />
+                    62 3771-7175
+                  </h3>
+                  <h3>
+                    {' '}
+                    <LogoIcon className={'fab fa-whatsapp'} /> 62 99347-3848
+                  </h3>
+                  <h3>
+                    {' '}
+                    <LogoIcon className={'far fa-envelope'} />
+                    contato@casafreud.com.br
+                  </h3>
                   <StyledForm onSubmit={handleSubmit}>
                     <label htmlFor="name">Seu nome</label>
                     <StyledInput type="text" name="name" value={state.name} onChange={handleInput} />

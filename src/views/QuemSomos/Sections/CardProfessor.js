@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Box, Grid, Typography } from '@material-ui/core';
+import { Box, Grid } from '@material-ui/core';
 
 const Card = styled.div`
   background-color: #fff;
@@ -25,7 +25,7 @@ const KnowMore = styled.div`
 const CustomIcon = styled.i`
   padding: 0px 5px 0 5px;
   font-size: 18px;
-  color: #005aaa;
+  color: #fff;
   text-align: right;
   cursor: pointer;
 `;
@@ -44,14 +44,11 @@ const CardProfessor = ({ image, title, children, whatsapp, instagram }) => {
           </Box>
           <Grid container style={{ position: 'absolute', bottom: 0 }}>
             <Grid item xs={8}>
-              <KnowMore>SAIBA MAIS</KnowMore>
-            </Grid>
-            <Grid item xs={4}>
-              <Typography align="right">
+              <KnowMore>
                 <CustomIcon href={instagram} className={' fab fa-instagram'} />
-                <CustomIcon href={whatsapp} className={' fab fa-whatsapp'} />
-              </Typography>
+              </KnowMore>
             </Grid>
+            <Grid item xs={4}></Grid>
           </Grid>
         </Grid>
       </Grid>
