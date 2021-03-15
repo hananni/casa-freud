@@ -12,7 +12,7 @@ const WorkGroupBackground = styled.div`
   background-image: url(${gruposdetrabalho});
   height: 400px;
   background-size: cover;
-  background-position: center center;
+  background-position: 50% 35%;
 `;
 const KnowMore = styled.div`
   width: 80%;
