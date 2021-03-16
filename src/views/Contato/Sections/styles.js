@@ -8,9 +8,9 @@ const WhiteField = styled.div`
 `;
 
 const sharedStyles = css`
-  background-color: #eee;
+  background-color: #fff;
   height: 40px;
-  border: 1px solid #ddd;
+  border: 1px solid #b1aeae;
   margin: 10px 0 20px 0;
   padding: 20px;
   box-sizing: border-box;
@@ -24,7 +24,6 @@ const StyledFormWrapper = styled.div`
 const StyledForm = styled.form`
   width: 100%;
   max-width: 700px;
-  background-color: #fff;
   box-sizing: border-box;
 `;
 
@@ -35,9 +34,9 @@ const StyledInput = styled.input`
 `;
 
 const StyledTextArea = styled.textarea`
-  background-color: #eee;
+  background-color: #fff;
   width: 100%;
-  min-height: 100px;
+  min-height: 166px;
   resize: none;
   ${sharedStyles}
 `;
@@ -66,7 +65,7 @@ const LogoIcon = styled.i`
 `;
 
 const StyledP = styled.p`
-  font-size: 16px;
+  font-size: 18px;
   color: #9c9c9c;
 `;
 

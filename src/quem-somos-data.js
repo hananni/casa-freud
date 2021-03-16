@@ -5,6 +5,7 @@ import marcio from 'assets/img/marcio.JPG';
 import sheila from 'assets/img/sheila.JPG';
 import nelson from 'assets/img/nelson.JPG';
 import lauane from 'assets/img/lauane.JPG';
+import objetivo from 'assets/img/nosso-objetivo.jpg';
 
 const WHO_WE_ARE = {
   title: 'Quem somos',
@@ -54,7 +55,7 @@ const PROFESSORS = [
 
 const GOALS = {
   title: 'Nossos Objetivos',
-  image: whoWeAre,
+  image: objetivo,
   description:
     'Buscamos transmitir a psicanálise em sua especificidade, com base nos três elementos essenciais da formação: análise pessoal, supervisão e estudo crítico da teoria psicanalítica. Pretende-se desenvolver e aprimorar a escuta clínica levando em consideração a metapsicologia freudiana e os aportes das escolas francesa e inglesa. Nossa clínica psicanalítica busca a compreensão de todas as formas de sofrimento observadas na atualidade.',
 };

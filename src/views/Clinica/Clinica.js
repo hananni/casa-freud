@@ -1,44 +1,20 @@
 import React from 'react';
-import classNames from 'classnames';
-import { makeStyles } from '@material-ui/core/styles';
-import Header from 'components/Header/Header.js';
-import Footer from 'components/Footer/Footer.js';
-import Parallax from 'components/Parallax/Parallax.js';
-import HeaderLinks from 'components/Header/HeaderLinks.js';
 import SectionFeatures from '../../components/SectionFeatures/SectionFeatures';
-import styles from 'assets/jss/material-kit-react/views/components.js';
 import TitlePage from 'components/TitlePage/TitlePage';
 import SectionRoom from './Sections/SectionRoom';
 import SectionEvaluation from 'components/SectionEvalutation/SectionEvaluation';
+import Layout from 'views/Layout';
 
-const useStyles = makeStyles(styles);
-
+const getParallaxContent = () => {
+  return <TitlePage title="Clínica" />;
+};
 const Clinica = props => {
-  const classes = useStyles();
-  const { ...rest } = props;
   return (
-    <div>
-      <Header
-        brand="Material Kit React"
-        rightLinks={<HeaderLinks />}
-        fixed
-        color="transparent"
-        changeColorOnScroll={{
-          height: 400,
-          color: 'white',
-        }}
-        {...rest}
-      />
-      <Parallax image={require('assets/img/bg4.jpg')}>
-        <TitlePage title="Clínica" />
-      </Parallax>
-      <div className={classNames(classes.main)}>
-        <SectionFeatures />
-        <SectionRoom />
-        <SectionEvaluation noMarginTop />
-      </div>
-      <Footer />
-    </div>
+    <Layout parallaxContent={getParallaxContent()}>
+      <SectionFeatures />
+      <SectionRoom />
+      <SectionEvaluation noMarginTop />
+    </Layout>
   );
 };
 

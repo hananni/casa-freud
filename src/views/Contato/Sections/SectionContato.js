@@ -96,12 +96,35 @@ const SectionContato = () => {
                     <StyledForm onSubmit={handleSubmit}>
                       <Grid container spacing={2}>
                         <Grid item xs={12} md={6}>
-                          <StyledInput type="text" name="name" value={state.name} onChange={handleInput} />
-                          <StyledInput type="email" name="email" value={state.email} onChange={handleInput} />
-                          <StyledInput type="subject" name="subject" value={state.subject} onChange={handleInput} />
+                          <StyledInput
+                            type="text"
+                            name="name"
+                            placeholder="Seu nome"
+                            value={state.name}
+                            onChange={handleInput}
+                          />
+                          <StyledInput
+                            type="email"
+                            name="email"
+                            placeholder="Seu email"
+                            value={state.email}
+                            onChange={handleInput}
+                          />
+                          <StyledInput
+                            type="subject"
+                            name="subject"
+                            placeholder="Assunto"
+                            value={state.subject}
+                            onChange={handleInput}
+                          />
                         </Grid>
                         <Grid item xs={12} md={6}>
-                          <StyledTextArea name="message" value={state.message} onChange={handleInput} />
+                          <StyledTextArea
+                            name="message"
+                            placeholder="Mensagem"
+                            value={state.message}
+                            onChange={handleInput}
+                          />
                           {error && (
                             <StyledError>
                               <p>{error}</p>
