@@ -6,7 +6,7 @@ import styled from 'styled-components';
 const Title = styled.p`
   color: ${props => props.color};
   font-style: ${props => props.fontStyle};
-  font-size: 35px;
+  font-size: 30px;
   margin-bottom: ${props => (props.marginBottom ? props.marginBottom : '0px')};
   font-weight: ${props => (props.soft ? '400' : '600')};
 

@@ -1,22 +1,41 @@
 /*eslint-disable*/
 import React from 'react';
-// nodejs library to set properties for components
 import PropTypes from 'prop-types';
-// nodejs library that concatenates classes
 import classNames from 'classnames';
-// material-ui core components
-import { List, ListItem, Grid, Box, InputBase, IconButton, Paper, Divider } from '@material-ui/core';
+import { Grid, Box, InputBase, IconButton, Paper, Divider } from '@material-ui/core';
 import logo from '../../assets/img/logorodape.png';
-// @material-ui/icons
-import Favorite from '@material-ui/icons/Favorite';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import useStyles from 'assets/jss/material-kit-react/components/footerStyle.js';
-import { styled } from '@material-ui/styles';
+import { styled as mstyled } from '@material-ui/styles';
 import Button from '../CustomButtons/Button.js';
+import styled from 'styled-components';
+import { devices } from 'responsive';
 
-const MyArrow = styled(ArrowForwardIcon)({
+const MyArrow = mstyled(ArrowForwardIcon)({
   color: 'white',
 });
+
+const LogoContainer = styled.div`
+  margin-top: -56px;
+  img {
+    width: 300px;
+  }
+
+  @media ${devices.xsMax} {
+    margin-top: -40px;
+    img {
+      width: 200px;
+    }
+  }
+`;
+
+const Spacing = styled.div`
+  ${props => props.marginTop && `margin-top: ${props.marginTop}px`};
+  @media ${devices.sm} {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+`;
 
 const Footer = props => {
   const classes = useStyles();
@@ -25,25 +44,21 @@ const Footer = props => {
     [classes.footer]: true,
     [classes.footerWhiteFont]: whiteFont,
   });
-  const aClasses = classNames({
-    [classes.a]: true,
-    [classes.footerWhiteFont]: whiteFont,
-  });
   return (
     <div>
       <footer className={footerClasses}>
         <div className={classes.container}>
           <Grid container>
             <Grid item xs={12} md={6}>
-              <Box mt={-7}>
+              <LogoContainer>
                 <img src={logo} alt="LOGO_FREUD" width="60%" />
-              </Box>
-              <Box mr={10} ml={10} className={classes.address}>
+              </LogoContainer>
+              <Spacing>
                 Rua Barão do Rio Branco, Nº 1481 <br /> St. Central, Anápolis GO
-              </Box>
+              </Spacing>
             </Grid>
             <Grid item xs={12} md={6}>
-              <Box pr={10} pl={10} mt={5}>
+              <Spacing marginTop={40}>
                 <div className={classes.newsletter}>Newsletter</div>
                 <div className={classes.descriptionNewsletter}>Fique atualizado com as nossas últimas Notícias</div>
                 <Box mt={2}>
@@ -59,7 +74,7 @@ const Footer = props => {
                     </IconButton>
                   </Paper>
                 </Box>
-              </Box>
+              </Spacing>
             </Grid>
             <Grid item xs={12} md={6}>
               <Box ml={10} mr={10} mt={5} mb={5} className={classes.copyright}>
