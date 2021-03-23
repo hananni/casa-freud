@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Box, Grid } from '@material-ui/core';
 import { devices } from 'responsive';
+import { redirectUrl } from 'utils/functions';
 
 const Card = styled.div`
   background-color: #fff;
@@ -53,12 +54,14 @@ const CardProfessor = ({ image, title, children, whatsapp, instagram }) => {
         <Grid item xs={12} md={9} style={{ position: 'relative' }}>
           <Box p={3}>
             <Title>{title}</Title>
-            <Box mt={2}>{children}</Box>
+            <Box mt={2} mb={2}>
+              {children}
+            </Box>
           </Box>
           <Grid container style={{ position: 'absolute', bottom: 0 }}>
             <Grid item xs={8}>
               <KnowMore>
-                <CustomIcon href={instagram} className={' fab fa-instagram'} />
+                <CustomIcon onClick={() => redirectUrl(instagram)} className={' fab fa-instagram'} />
               </KnowMore>
             </Grid>
             <Grid item xs={4}></Grid>

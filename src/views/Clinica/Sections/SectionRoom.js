@@ -24,7 +24,7 @@ const SectionRoom = () => {
           <Box m={4}>
             <TitleFreud title="Clínica escola" center />
           </Box>
-          <Box mt={2}>
+          <Box mt={2} mb={5}>
             Os atendimentos em nossa Clínica Escola de Psicanálise são realizados pelos alunos do último ano do Curso de
             Formação em Psicanálise da Casa Freud. Sabendo que o custo padrão de um tratamento psicanalítico é
             convencionalmente alto, o que pode ser um dos grandes empecilhos para que a população em geral não tenha

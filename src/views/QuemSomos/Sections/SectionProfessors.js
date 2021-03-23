@@ -22,7 +22,7 @@ const SectionProfessors = () => {
             {PROFESSORS.map(professor => {
               return (
                 <Grid item sm={12} md={12} key={professor.title}>
-                  <CardProfessor title={professor.title} image={professor.image}>
+                  <CardProfessor title={professor.title} image={professor.image} instagram={professor.instagram}>
                     {professor.description}
                   </CardProfessor>
                 </Grid>

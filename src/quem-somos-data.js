@@ -4,7 +4,9 @@ import valeria from 'assets/img/valeria.JPG';
 import marcio from 'assets/img/marcio.JPG';
 import sheila from 'assets/img/sheila.JPG';
 import lauane from 'assets/img/lauane.JPG';
+import nelson from 'assets/img/nelson.JPG';
 import objetivo from 'assets/img/nosso-objetivo.jpg';
+import { NewReleasesOutlined } from '@material-ui/icons';
 
 const WHO_WE_ARE = {
   title: 'Quem somos',
@@ -44,6 +46,7 @@ const PROFESSORS = [
   },
   {
     title: 'Profº Dr.Nelson de Abreu Júnior',
+    image: nelson,
     description:
       'Possui graduação, Bacharelado e Licenciatura em Psicologia pelas Faculdades Metropolitanas Unidas (1985), mestrado em Ciências da Educação Superior pela Universidade de Havana (2003) convalidado pela pontifícia Universidade Católica de Goiás e doutorado em Educação pela Universidade de Brasília (2017).',
     instagram: 'https://instagram.com/nelsonabreujr?igshid=1nu1o4o73tsa8',
