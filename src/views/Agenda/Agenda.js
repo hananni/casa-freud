@@ -6,7 +6,7 @@ import SectionEvaluation from 'components/SectionEvalutation/SectionEvaluation';
 import Layout from 'views/Layout';
 
 const getParallaxContent = () => {
-  return <TitlePage title="Agenda" />;
+  return <TitlePage title="Dúvidas" />;
 };
 const Agenda = props => {
   return (

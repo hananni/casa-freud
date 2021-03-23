@@ -19,7 +19,7 @@ const FEATURES = [
   },
   {
     id: 4,
-    title: 'Agenda',
+    title: 'Dúvidas',
     description: 'É simplesmente uma simulação de texto da indústria tipográfica e de impressos.',
     link: '',
   },
@@ -105,24 +105,22 @@ const IMAGES = [
 
 const EVALUATIONS = [
   {
-    name: 'Helena Soares',
+    name: 'Wagner Braz de Matos',
     grade: 5,
-    opinion: 'É simplesmente uma simulação de texto da indústria',
+    opinion:
+      'Parabéns à Casa Freud por ter em seu corpo docente uma professora tão extraordinária quanto a Sheila. Na verdade não são somente aulas que ela ministra, são verdadeiros seminários.',
   },
   {
-    name: ' Maurício Nunes',
-    grade: 4,
-    opinion: 'É simplesmente uma simulação de texto da indústria',
-  },
-  {
-    name: ' Maurício Nunes',
-    grade: 4,
-    opinion: 'É simplesmente uma simulação de texto da indústria',
-  },
-  {
-    name: 'Helena Soares',
+    name: 'Suzi Borges Inácio Quirino',
     grade: 5,
-    opinion: 'É simplesmente uma simulação de texto da indústria',
+    opinion:
+      'Excelente aula, prof Valéria trás muita clareza ao ministrar o conteúdo, faz várias pontuações importantes e enriquece a aula com os exemplos de  atendimentos clínicos',
+  },
+  {
+    name: ' Reginaldo Flozino de Souza',
+    grade: 5,
+    opinion:
+      'Os esclarecimentos feitos pela professora sobre a maneira de tornar inteligível os conteúdos mais complexos adstritos ao ser humano, revelam a seriedade de se considerar todos os sintomas expressos como as " ambivalências". Aula muito boa e envolvente. A psicanálise é uma grande metodologia introduzida por Freud e revela por si mesma que o mérito está nas suas bases investigativas e criteriosas  em como se iniciou e não para de crescer. Aula excelente!',
   },
 ];
 

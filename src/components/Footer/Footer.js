@@ -10,6 +10,7 @@ import { styled as mstyled } from '@material-ui/styles';
 import Button from '../CustomButtons/Button.js';
 import styled from 'styled-components';
 import { devices } from 'responsive';
+import { redirectUrl } from 'utils/functions';
 
 const MyArrow = mstyled(ArrowForwardIcon)({
   color: 'white',
@@ -35,6 +36,12 @@ const Spacing = styled.div`
     padding-left: 80px;
     padding-right: 80px;
   }
+`;
+
+const LogoIcon = styled.i`
+  margin: 5px 10px;
+  color: #fff;
+  cursor: pointer;
 `;
 
 const Footer = props => {
@@ -83,12 +90,24 @@ const Footer = props => {
             </Grid>
             <Grid item xs={12} md={6}>
               <Box pr={10} pl={10} mt={5} align="right">
-                <Button justIcon color="facebook" size={'sm'}>
-                  <i className={classes.socials + ' fab fa-instagram'} />
-                </Button>
-                <Button justIcon color="facebook" size={'sm'}>
-                  <i className={classes.socials + ' fab fa-whatsapp'} />
-                </Button>
+                <LogoIcon
+                  justIcon
+                  color="facebook"
+                  size={'sm'}
+                  className={'fab fa-instagram'}
+                  onClick={() => {
+                    redirectUrl('https://www.instagram.com/casafreudanapolis/');
+                  }}
+                />
+                <LogoIcon
+                  justIcon
+                  color="facebook"
+                  size={'sm'}
+                  className={'fab fa-whatsapp'}
+                  onClick={() => {
+                    redirectUrl('https://api.whatsapp.com/send?phone=5562993473848');
+                  }}
+                />
               </Box>
             </Grid>
           </Grid>

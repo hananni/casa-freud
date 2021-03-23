@@ -19,6 +19,7 @@ const sharedStyles = css`
 const StyledFormWrapper = styled.div`
   padding: 5px;
   margin: 20px auto;
+  text-align: left;
 `;
 
 const StyledForm = styled.form`
@@ -51,6 +52,7 @@ const StyledButton = styled.button`
   padding: 0 20px;
   cursor: pointer;
   box-sizing: border-box;
+  float: right;
 `;
 
 const StyledError = styled.div`
@@ -60,13 +62,25 @@ const StyledError = styled.div`
 `;
 
 const LogoIcon = styled.i`
-  margin: 5px 10px;
+  font-size: 30px;
   color: #015aaa;
+  padding-left: 3px;
 `;
 
 const StyledP = styled.p`
   font-size: 18px;
   color: #9c9c9c;
+  padding-left: 20px;
+  font-weight: 400;
+`;
+
+const FlexDiv = styled.div`
+  display: flex;
+  margin-bottom: 10px;
+  svg {
+    font-size: 30px;
+    fill: #015aaa;
+  }
 `;
 
 export {
@@ -79,4 +93,5 @@ export {
   StyledError,
   LogoIcon,
   StyledP,
+  FlexDiv,
 };

@@ -24,7 +24,7 @@ const KnowMore = styled.div`
 `;
 
 const CustomIcon = styled.i`
-  padding: 0px 5px 0 5px;
+  padding: 5px;
   font-size: 18px;
   color: #fff;
   text-align: right;

@@ -12,6 +12,7 @@ import Menu from '@material-ui/icons/Menu';
 import { headerStyle, HEADER_LOGO_SIZE } from 'assets/jss/material-kit-react/components/headerStyle.js';
 import { Box, Grid } from '@material-ui/core';
 import styled from 'styled-components';
+import { redirectUrl } from 'utils/functions';
 
 const useStyles = makeStyles(headerStyle);
 
@@ -26,6 +27,7 @@ const LogoHeader = styled(Box)`
 const LogoIcon = styled.i`
   margin: 5px 10px;
   color: #fff;
+  cursor: pointer;
 `;
 
 const KnowMore = styled.div`
@@ -83,11 +85,28 @@ const Header = props => {
         <div className={classes.container} style={{ paddingRight: 0, height: HEADER_LOGO_SIZE }}>
           <Grid container alignItems="center">
             <Grid xs={4} item>
-              <LogoIcon className={'fab fa-instagram'} />
-              <LogoIcon className={'fab fa-whatsapp'} />
+              <LogoIcon
+                className={'fab fa-instagram'}
+                onClick={() => {
+                  redirectUrl('https://www.instagram.com/casafreudanapolis/');
+                }}
+              />
+
+              <LogoIcon
+                className={'fab fa-whatsapp'}
+                onClick={() => {
+                  redirectUrl('https://api.whatsapp.com/send?phone=5562993473848');
+                }}
+              />
             </Grid>
             <Grid xs={8} item>
-              <KnowMore>ÁREA DO ALUNO</KnowMore>
+              <KnowMore
+                onClick={() => {
+                  redirectUrl('http://casafreud.tempsite.ws/moodle/');
+                }}
+              >
+                ÁREA DO ALUNO
+              </KnowMore>
             </Grid>
           </Grid>
         </div>

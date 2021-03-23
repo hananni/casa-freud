@@ -5,6 +5,7 @@ import { Grid, Box } from '@material-ui/core';
 import facade from 'assets/img/facade.JPG';
 import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
 import PhoneOutlinedIcon from '@material-ui/icons/PhoneOutlined';
+import MailOutline from '@material-ui/icons/MailOutline';
 import {
   WhiteField,
   StyledFormWrapper,
@@ -15,6 +16,7 @@ import {
   StyledError,
   LogoIcon,
   StyledP,
+  FlexDiv,
 } from './styles';
 
 const useStyles = makeStyles(styles);
@@ -59,7 +61,7 @@ const SectionContato = () => {
   };
 
   return (
-    <Box pt={5}>
+    <Box>
       <div className={classes.section}>
         <div className={classes.container}>
           <Grid container>
@@ -76,21 +78,22 @@ const SectionContato = () => {
               <StyledFormWrapper>
                 <Grid container spacing={2}>
                   <Grid item xs={12} md={4}>
-                    <StyledP>
+                    <FlexDiv>
                       <HomeOutlinedIcon />
-                      Rua Barão do Rio Branco, Nº 1481 St. Central, Anápolis GO
-                    </StyledP>
-                    <StyledP>
+                      <StyledP>Rua Barão do Rio Branco, Nº 1481 St. Central, Anápolis GO</StyledP>
+                    </FlexDiv>
+                    <FlexDiv>
                       <PhoneOutlinedIcon />
-                      62 3771-7175
-                    </StyledP>
-                    <StyledP>
-                      <LogoIcon className={'fab fa-whatsapp'} /> 62 99347-3848
-                    </StyledP>
-                    <StyledP>
-                      <LogoIcon className={'far fa-envelope'} />
-                      contato@casafreud.com.br
-                    </StyledP>
+                      <StyledP>62 3771-7175</StyledP>
+                    </FlexDiv>
+                    <FlexDiv>
+                      <LogoIcon className={'fab fa-whatsapp'} />
+                      <StyledP>62 99347-3848</StyledP>
+                    </FlexDiv>
+                    <FlexDiv>
+                      <MailOutline />
+                      <StyledP>contato@casafreud.com.br</StyledP>
+                    </FlexDiv>
                   </Grid>
                   <Grid item xs={12} md={8}>
                     <StyledForm onSubmit={handleSubmit}>

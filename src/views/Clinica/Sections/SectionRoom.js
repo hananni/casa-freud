@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import styles from 'assets/jss/material-kit-react/views/componentsSections/basicsStyle.js';
 import { Grid, Box } from '@material-ui/core';
 import TitleFreud from 'components/Typography/TitleFreud';
-import room from 'assets/img/room.jpg';
+import room from 'assets/img/bg9.jpg';
 import styled from 'styled-components';
 
 const useStyles = makeStyles(styles);
@@ -24,7 +24,7 @@ const SectionRoom = () => {
           <Box m={4}>
             <TitleFreud title="Clínica escola" center />
           </Box>
-          <Box mt={10}>
+          <Box mt={2}>
             Os atendimentos em nossa Clínica Escola de Psicanálise são realizados pelos alunos do último ano do Curso de
             Formação em Psicanálise da Casa Freud. Sabendo que o custo padrão de um tratamento psicanalítico é
             convencionalmente alto, o que pode ser um dos grandes empecilhos para que a população em geral não tenha

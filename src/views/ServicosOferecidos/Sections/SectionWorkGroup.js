@@ -14,7 +14,8 @@ const WorkGroupBackground = styled.div`
   background-size: cover;
   background-position: 50% 35%;
 `;
-const KnowMore = styled.div`
+const BlueStrip = styled.div`
+  height: 25px;
   width: 80%;
   color: #005aaa;
   background-image: -webkit-linear-gradient(-45deg, #005aaa 90%, #ffffff00 10%);
@@ -49,7 +50,7 @@ const SectionWorkGroup = () => {
           </Grid>
         </div>
       </WorkGroupBackground>
-      <KnowMore>LEIA MAIS</KnowMore>
+      <BlueStrip />
     </Box>
   );
 };
