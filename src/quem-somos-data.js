@@ -6,7 +6,6 @@ import sheila from 'assets/img/sheila.JPG';
 import lauane from 'assets/img/lauane.JPG';
 import nelson from 'assets/img/nelson.JPG';
 import objetivo from 'assets/img/nosso-objetivo.jpg';
-import { NewReleasesOutlined } from '@material-ui/icons';
 
 const WHO_WE_ARE = {
   title: 'Quem somos',
