@@ -49,10 +49,10 @@ const Parallax = props => {
       className={parallaxClasses}
       style={{
         ...style,
-        height: props.home ? '100vh' : '55vh',
-        minHeight: '450px',
+        height: props.home ? '100vh' : '400px',
         backgroundImage: 'url(' + image + ')',
-        backgroundAttachment: 'fixed',
+        backgroundAttachment: props.home ? 'fixed' : 'initial',
+        backgroundPosition: props.home ? 'center center' : '50% 30%',
         // transform: transform
       }}
     >

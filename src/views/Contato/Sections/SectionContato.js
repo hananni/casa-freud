@@ -66,7 +66,14 @@ const SectionContato = () => {
         <div className={classes.container}>
           <Grid container>
             <Grid item xs={12}>
-              <img alt="contato" src={facade} width="100%" />
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4553.363455107112!2d-48.957526424539026!3d-16.327695144125574!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa6d687cf6c6f1ca5!2sCasa%20Freud!5e0!3m2!1spt-BR!2sbr!4v1616701739488!5m2!1spt-BR!2sbr"
+                width="100%"
+                height="450"
+                style={{ border: 0 }}
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
             </Grid>
           </Grid>
         </div>
