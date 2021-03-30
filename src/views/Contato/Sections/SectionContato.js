@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import styles from 'assets/jss/material-kit-react/views/componentsSections/basicsStyle.js';
-import { Grid, Box } from '@material-ui/core';
+import { Grid, Box, CircularProgress } from '@material-ui/core';
 import facade from 'assets/img/facade.JPG';
 import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
 import PhoneOutlinedIcon from '@material-ui/icons/PhoneOutlined';
@@ -17,15 +17,17 @@ import {
   LogoIcon,
   StyledP,
   FlexDiv,
+  StyledSuccess,
 } from './styles';
+import emailjs from 'emailjs-com';
 
 const useStyles = makeStyles(styles);
 
 const initalState = {
-  name: '',
+  nome: '',
   email: '',
-  subject: '',
-  message: '',
+  assunto: '',
+  mensagem: '',
 };
 
 const SectionContato = () => {
@@ -33,14 +35,17 @@ const SectionContato = () => {
 
   const [state, setState] = useState(initalState);
   const [error, setError] = useState('');
+  const [success, setSuccess] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = e => {
     e.preventDefault();
-    console.log('enviado');
-    console.log(state);
+    setIsLoading(true);
+    setSuccess('');
 
     for (let key in state) {
       if (state[key] === '') {
+        setIsLoading(false);
         setError(`Você não digitou seu ${key}`);
         return;
       }
@@ -48,9 +53,17 @@ const SectionContato = () => {
     setError('');
     const regex = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
     const test = regex.test(state.email);
-    console.log(test);
 
-    console.log('enviado');
+    emailjs.send('service_uqf6cfl', 'template_yewj1v9', state, 'user_spPujwnruy0f4u4hNLhB7').then(
+      function(response) {
+        setSuccess('Mensagem enviada com sucesso');
+        setIsLoading(false);
+      },
+      function(error) {
+        setError(`Houve um erro no envio, tente novamente`);
+        setIsLoading(false);
+      }
+    );
   };
 
   const handleInput = e => {
@@ -108,9 +121,9 @@ const SectionContato = () => {
                         <Grid item xs={12} md={6}>
                           <StyledInput
                             type="text"
-                            name="name"
+                            name="nome"
                             placeholder="Seu nome"
-                            value={state.name}
+                            value={state.nome}
                             onChange={handleInput}
                           />
                           <StyledInput
@@ -122,17 +135,17 @@ const SectionContato = () => {
                           />
                           <StyledInput
                             type="subject"
-                            name="subject"
+                            name="assunto"
                             placeholder="Assunto"
-                            value={state.subject}
+                            value={state.assunto}
                             onChange={handleInput}
                           />
                         </Grid>
                         <Grid item xs={12} md={6}>
                           <StyledTextArea
-                            name="message"
+                            name="mensagem"
                             placeholder="Mensagem"
-                            value={state.message}
+                            value={state.mensagem}
                             onChange={handleInput}
                           />
                           {error && (
@@ -140,7 +153,14 @@ const SectionContato = () => {
                               <p>{error}</p>
                             </StyledError>
                           )}
-                          <StyledButton type="submit">Enviar Mensagem</StyledButton>
+                          {success && (
+                            <StyledSuccess>
+                              <p>{success}</p>
+                            </StyledSuccess>
+                          )}
+                          <StyledButton type="submit" disabled={isLoading}>
+                            Enviar Mensagem {isLoading && <i className="fa fa-spinner fa-spin" />}
+                          </StyledButton>
                         </Grid>
                       </Grid>
                     </StyledForm>

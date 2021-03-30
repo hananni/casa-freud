@@ -1,5 +1,5 @@
 /*eslint-disable*/
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Grid, Box, InputBase, IconButton, Paper, Divider } from '@material-ui/core';
@@ -11,6 +11,7 @@ import Button from '../CustomButtons/Button.js';
 import styled from 'styled-components';
 import { devices } from 'responsive';
 import { redirectUrl } from 'utils/functions';
+import emailjs from 'emailjs-com';
 
 const MyArrow = mstyled(ArrowForwardIcon)({
   color: 'white',
@@ -47,6 +48,14 @@ const LogoIcon = styled.i`
 const Footer = props => {
   const classes = useStyles();
   const { whiteFont } = props;
+  const [email, setEmail] = useState();
+  const sendNewsLetter = e => {
+    e.preventDefault();
+    emailjs
+      .send('service_8v9fi6j', 'template_yewj1v9', { email }, 'user_spPujwnruy0f4u4hNLhB7')
+      .then(function(response) {}, function(error) {});
+  };
+
   const footerClasses = classNames({
     [classes.footer]: true,
     [classes.footerWhiteFont]: whiteFont,
@@ -69,14 +78,19 @@ const Footer = props => {
                 <div className={classes.newsletter}>Newsletter</div>
                 <div className={classes.descriptionNewsletter}>Fique atualizado com as nossas últimas Notícias</div>
                 <Box mt={2}>
-                  <Paper component="form" className={classes.root}>
+                  <Paper component="form" onSubmit={sendNewsLetter} className={classes.root}>
                     <InputBase
+                      type="email"
                       className={classes.input}
                       placeholder="Envie seu Email"
                       inputProps={{ 'aria-label': 'envie email' }}
+                      onChange={e => {
+                        setEmail(e.currentTarget.value);
+                      }}
+                      required
                     />
                     <Divider className={classes.divider} orientation="vertical" />
-                    <IconButton color="primary" className={classes.iconButton} aria-label="directions">
+                    <IconButton type="submit" color="primary" className={classes.iconButton} aria-label="directions">
                       <MyArrow />
                     </IconButton>
                   </Paper>

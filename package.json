@@ -6,9 +6,10 @@
   "main": "dist/index.js",
   "dependencies": {
     "@material-ui/core": "^4.9.10",
-    "@material-ui/lab": "^4.0.0-alpha.49",
     "@material-ui/icons": "4.2.1",
+    "@material-ui/lab": "^4.0.0-alpha.49",
     "classnames": "2.2.6",
+    "emailjs-com": "^2.6.4",
     "history": "4.9.0",
     "moment": "2.24.0",
     "node-sass": "4.12.0",

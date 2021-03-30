@@ -53,10 +53,20 @@ const StyledButton = styled.button`
   cursor: pointer;
   box-sizing: border-box;
   float: right;
+
+  :disabled {
+    background-color: #5a7c9a;
+  }
 `;
 
 const StyledError = styled.div`
   color: red;
+  font-weight: 800;
+  margin: 0 0 40px 0;
+`;
+
+const StyledSuccess = styled.div`
+  color: green;
   font-weight: 800;
   margin: 0 0 40px 0;
 `;
@@ -94,4 +104,5 @@ export {
   LogoIcon,
   StyledP,
   FlexDiv,
+  StyledSuccess,
 };
