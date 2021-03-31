@@ -14,7 +14,8 @@ const FEATURES = [
   {
     id: 3,
     title: 'Clínica',
-    description: 'É simplesmente uma simulação de texto da indústria tipográfica e de impressos.',
+    description:
+      'Os atendimentos em nossa Clínica Escola são realizados pelos alunos do último ano do Curso de Formação em Psicanálise.',
     link: '',
   },
   {

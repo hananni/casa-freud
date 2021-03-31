@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import styles from 'assets/jss/material-kit-react/views/componentsSections/basicsStyle.js';
-import { Grid, Box, CircularProgress } from '@material-ui/core';
-import facade from 'assets/img/facade.JPG';
+import { Grid, Box } from '@material-ui/core';
 import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
 import PhoneOutlinedIcon from '@material-ui/icons/PhoneOutlined';
 import MailOutline from '@material-ui/icons/MailOutline';
@@ -75,22 +74,6 @@ const SectionContato = () => {
 
   return (
     <Box>
-      <div className={classes.section}>
-        <div className={classes.container}>
-          <Grid container>
-            <Grid item xs={12}>
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4553.363455107112!2d-48.957526424539026!3d-16.327695144125574!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa6d687cf6c6f1ca5!2sCasa%20Freud!5e0!3m2!1spt-BR!2sbr!4v1616701739488!5m2!1spt-BR!2sbr"
-                width="100%"
-                height="450"
-                style={{ border: 0 }}
-                allowfullscreen=""
-                loading="lazy"
-              ></iframe>
-            </Grid>
-          </Grid>
-        </div>
-      </div>
       <Grid item xs={12}>
         <WhiteField>
           <div className={classes.section}>
@@ -171,6 +154,24 @@ const SectionContato = () => {
           </div>
         </WhiteField>
       </Grid>
+      <Box pb={10}>
+        <div className={classes.section}>
+          <div className={classes.container}>
+            <Grid container>
+              <Grid item xs={12}>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4553.363455107112!2d-48.957526424539026!3d-16.327695144125574!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa6d687cf6c6f1ca5!2sCasa%20Freud!5e0!3m2!1spt-BR!2sbr!4v1616701739488!5m2!1spt-BR!2sbr"
+                  width="100%"
+                  height="450"
+                  style={{ border: 0 }}
+                  allowfullscreen=""
+                  loading="lazy"
+                ></iframe>
+              </Grid>
+            </Grid>
+          </div>
+        </div>
+      </Box>
     </Box>
   );
 };
