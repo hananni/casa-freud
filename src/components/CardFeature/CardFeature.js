@@ -7,6 +7,7 @@ import styles from './cardStyle.js';
 import { Typography } from '@material-ui/core';
 import styled from 'styled-components';
 import { devices } from 'responsive.js';
+import { useHistory } from 'react-router-dom';
 
 const useStyles = makeStyles(styles);
 
@@ -22,14 +23,24 @@ const HeaderFeature = styled.div`
   }
 `;
 
-export default function CardFeature({ title, children }) {
+const ReadMore = styled.p`
+  font-weight: 600;
+  margin-top: 10px;
+  cursor: pointer;
+`;
+
+export default function CardFeature({ title, link, children }) {
   const classes = useStyles();
+  const history = useHistory();
   return (
     <div className={classes.card}>
       <HeaderFeature>
         <Typography>{title}</Typography>
       </HeaderFeature>
-      <div className={classes.body}>{children}</div>
+      <div className={classes.body}>
+        {children}
+        <ReadMore onClick={() => history.push(link)}>LEIA MAIS</ReadMore>
+      </div>
     </div>
   );
 }

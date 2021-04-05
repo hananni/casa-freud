@@ -12,7 +12,7 @@ const cardStyle = {
     textAlign: 'center',
   },
   body: {
-    padding: 20,
+    padding: '20px 20px 10px 20px',
     color: 'rgba(0, 0, 0, 0.87)',
     background: '#fff',
     fontSize: '.875rem',
