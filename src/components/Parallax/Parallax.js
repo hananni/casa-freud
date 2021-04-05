@@ -9,7 +9,8 @@ import { makeStyles } from '@material-ui/core/styles';
 // core components
 import styles from 'assets/jss/material-kit-react/components/parallaxStyle.js';
 import logo from 'assets/img/logorcabeca.png';
-import { Box } from '@material-ui/core';
+import logomobile from 'assets/img/logomobile.png';
+import { Box, useMediaQuery } from '@material-ui/core';
 const useStyles = makeStyles(styles);
 
 const Parallax = props => {
@@ -36,6 +37,8 @@ const Parallax = props => {
   //   var windowScrollTop = window.pageYOffset;
   //   setTransform("translate3d(0," + windowScrollTop + "px,0)");
   // };
+
+  const mdUp = useMediaQuery('(min-width:600px)');
   const { filter, className, children, style, image, small } = props;
   const classes = useStyles();
   const parallaxClasses = classNames({
@@ -59,7 +62,7 @@ const Parallax = props => {
       <div style={{ display: 'block' }}>
         <div className={classes.container}>
           <Box mt={14}>
-            <img alt="logo" src={logo} />
+            <img alt="logo" src={mdUp ? logo : logomobile} />
           </Box>
         </div>
       </div>

@@ -9,7 +9,7 @@ import Layout from 'views/Layout';
 const ServicosOferecidos = () => {
   return (
     <Layout parallaxContent={<TitlePage title="Serviços oferecidos" />}>
-      <SectionFeatures ids={[1, 3, 4]} />
+      <SectionFeatures ids={[2, 3, 4]} />
       <SectionServices />
       <SectionGallery />
       <SectionWorkGroup />

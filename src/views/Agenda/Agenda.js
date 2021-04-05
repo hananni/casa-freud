@@ -11,7 +11,7 @@ const getParallaxContent = () => {
 const Agenda = props => {
   return (
     <Layout parallaxContent={getParallaxContent()}>
-      <SectionFeatures />
+      <SectionFeatures ids={[1, 3, 4]} />
       <SectionActivities />
       <SectionEvaluation />
     </Layout>

@@ -52,7 +52,7 @@ const Footer = props => {
   const sendNewsLetter = e => {
     e.preventDefault();
     emailjs
-      .send('service_8v9fi6j', 'template_yewj1v9', { email }, 'user_spPujwnruy0f4u4hNLhB7')
+      .send('service_8v9fi6j', 'template_wd4rkm7', { email }, 'user_spPujwnruy0f4u4hNLhB7')
       .then(function(response) {}, function(error) {});
   };
 

@@ -2,9 +2,8 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import styles from 'assets/jss/material-kit-react/views/componentsSections/basicsStyle.js';
 import { Box, Grid } from '@material-ui/core';
-import { COURSES } from 'common-data';
-import Carousel from 'react-slick';
 import styled from 'styled-components';
+import { useHistory } from 'react-router';
 
 const useStyles = makeStyles(styles);
 
@@ -40,10 +39,12 @@ const KnowMore = styled.div`
   font-size: 13px;
   font-weight: 500;
   font-style: italic;
+  cursor: pointer;
 `;
 
 const SectionCourses = () => {
   const classes = useStyles();
+  const history = useHistory();
   const settings = {
     dots: true,
     infinite: true,
@@ -84,18 +85,10 @@ const SectionCourses = () => {
       <Box className={classes.container}>
         <BigBlue>
           <SliderWrapper>
-            <Carousel {...settings}>
-              {COURSES.map(course => {
-                return (
-                  <div>
-                    <img width="300px" src={course.image} alt="courseimg" />
-                  </div>
-                );
-              })}
-            </Carousel>
+            <img width="340px" src={require('assets/img/fotoclinicahistoria.png')} alt="courseimg" />
           </SliderWrapper>
           <KnowMoreWrapper>
-            <KnowMore>Leia Mais</KnowMore>
+            <KnowMore onClick={() => history.push('/clinica')}>Leia Mais</KnowMore>
           </KnowMoreWrapper>
         </BigBlue>
       </Box>

@@ -1,28 +1,37 @@
+import React from 'react';
+
 const FEATURES = [
   {
     id: 1,
-    title: 'EAD',
-    description: 'É simplesmente uma simulação de texto da indústria tipográfica e de impressos.',
-    link: '',
+    title: 'Serviços Oferecidos',
+    description:
+      'A escola oferece cursos abrangendo áreas correlatas à psicanálise como Psicologia, Psicopatologia, Cultura e Arte.',
+    link: '/servicos-oferecidos',
   },
   {
     id: 2,
-    title: 'Biblioteca virtual',
-    description: 'É simplesmente uma simulação de texto da indústria tipográfica e de impressos.',
-    link: '',
+    title: 'Perguntas Frequentes',
+    description: (
+      <div>
+        Tem alguma dúvida? <div>Encontre respostas na página perguntas frequentes</div>{' '}
+      </div>
+    ),
+    link: '/duvidas',
   },
   {
     id: 3,
     title: 'Clínica',
     description:
       'Os atendimentos em nossa Clínica Escola são realizados pelos alunos do último ano do Curso de Formação em Psicanálise.',
-    link: '',
+    link: '/clinica',
   },
+
   {
     id: 4,
-    title: 'Dúvidas',
-    description: 'É simplesmente uma simulação de texto da indústria tipográfica e de impressos.',
-    link: '',
+    title: 'Quem Somos',
+    description:
+      'A Casa Freud é um espaço dedicado ao estudo, ao ensino, à investigação e à difusão da psicanálise em Anápolis ',
+    link: '/quem-somos',
   },
 ];
 
