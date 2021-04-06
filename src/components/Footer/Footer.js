@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { Grid, Box, InputBase, IconButton, Paper, Divider } from '@material-ui/core';
+import { Grid, Box, InputBase, IconButton, Paper, Divider, CircularProgress } from '@material-ui/core';
 import logo from '../../assets/img/logorodape.png';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import useStyles from 'assets/jss/material-kit-react/components/footerStyle.js';
@@ -12,9 +12,14 @@ import styled from 'styled-components';
 import { devices } from 'responsive';
 import { redirectUrl } from 'utils/functions';
 import emailjs from 'emailjs-com';
+import CheckIcon from '@material-ui/icons/Check';
 
 const MyArrow = mstyled(ArrowForwardIcon)({
   color: 'white',
+});
+
+const MyCheckIcon = mstyled(CheckIcon)({
+  color: '#4BB543',
 });
 
 const LogoContainer = styled.div`
@@ -49,11 +54,21 @@ const Footer = props => {
   const classes = useStyles();
   const { whiteFont } = props;
   const [email, setEmail] = useState();
+  const [isLoading, setIsLoading] = useState(false);
+  const [finished, setFinished] = useState(false);
   const sendNewsLetter = e => {
     e.preventDefault();
-    emailjs
-      .send('service_8v9fi6j', 'template_wd4rkm7', { email }, 'user_spPujwnruy0f4u4hNLhB7')
-      .then(function(response) {}, function(error) {});
+    setIsLoading(true);
+    emailjs.send('service_8v9fi6j', 'template_wd4rkm7', { email }, 'user_spPujwnruy0f4u4hNLhB7').then(
+      function(response) {
+        setIsLoading(false);
+        setFinished(true);
+      },
+      function(error) {
+        setIsLoading(false);
+        setFinished(false);
+      }
+    );
   };
 
   const footerClasses = classNames({
@@ -90,8 +105,15 @@ const Footer = props => {
                       required
                     />
                     <Divider className={classes.divider} orientation="vertical" />
-                    <IconButton type="submit" color="primary" className={classes.iconButton} aria-label="directions">
-                      <MyArrow />
+                    <IconButton
+                      type="submit"
+                      className={classes.iconButton}
+                      aria-label="directions"
+                      disabled={isLoading || finished}
+                    >
+                      {!finished && !isLoading && <MyArrow />}
+                      {finished && !isLoading && <MyCheckIcon />}
+                      {isLoading && <CircularProgress size={24} disableShrink />}
                     </IconButton>
                   </Paper>
                 </Box>

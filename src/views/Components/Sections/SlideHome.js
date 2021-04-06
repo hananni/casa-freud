@@ -4,29 +4,43 @@ import styles from 'assets/jss/material-kit-react/views/componentsSections/basic
 import { Box, Grid } from '@material-ui/core';
 import styled from 'styled-components';
 import { useHistory } from 'react-router';
+import { devices } from 'responsive';
 
 const useStyles = makeStyles(styles);
 
 const BigBlue = styled.div`
-  color: #fff;
-  background-image: -webkit-linear-gradient(-45deg, #005aaa70 65%, #ffffff00 72%);
-  text-align: right;
-  padding-right: 25px;
-  font-size: 13px;
-  font-weight: 500;
-  font-style: italic;
-  display: flex;
-  height: 250px;
-  max-width: 70%;
+  @media (min-width: 1000px) {
+    color: #fff;
+    background-image: -webkit-linear-gradient(-45deg, #005aaa70 65%, #ffffff00 72%);
+    text-align: right;
+    padding-right: 25px;
+    font-size: 13px;
+    font-weight: 500;
+    font-style: italic;
+    display: flex;
+    height: 250px;
+    max-width: 70%;
+  }
 `;
 
 const SliderWrapper = styled.div`
   max-width: 300px;
   margin-top: 30px;
+  @media (max-width: 999px) {
+    margin: auto;
+
+    img {
+      width: 300px;
+    }
+  }
 `;
 
 const KnowMoreWrapper = styled.div`
   margin-left: auto;
+  @media (max-width: 999px) {
+    margin: auto;
+    width: 300px;
+  }
 `;
 
 const KnowMore = styled.div`
@@ -40,6 +54,10 @@ const KnowMore = styled.div`
   font-weight: 500;
   font-style: italic;
   cursor: pointer;
+
+  @media (max-width: 999px) {
+    padding-right: 90px;
+  }
 `;
 
 const SectionCourses = () => {
