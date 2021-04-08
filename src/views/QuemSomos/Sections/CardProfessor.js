@@ -4,6 +4,19 @@ import { Box, Grid } from '@material-ui/core';
 import { devices } from 'responsive';
 import { redirectUrl } from 'utils/functions';
 
+const RowProfesor = styled.div`
+  display: block;
+  @media ${devices.md} {
+    display: flex;
+  }
+`;
+const ColProfesor = styled.div`
+  width: 100%;
+  @media ${devices.md} {
+    width: ${props => (props.width ? props.width : '100%')};
+  }
+`;
+
 const Card = styled.div`
   background-color: #fff;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -47,11 +60,11 @@ const ProfessorPhoto = styled.img`
 const CardProfessor = ({ image, title, children, whatsapp, instagram }) => {
   return (
     <Card>
-      <Grid container>
-        <Grid item xs={12} md={3}>
+      <RowProfesor>
+        <ColProfesor width="250px">
           <ProfessorPhoto alt={title} src={image} />
-        </Grid>
-        <Grid item xs={12} md={9} style={{ position: 'relative' }}>
+        </ColProfesor>
+        <ColProfesor style={{ position: 'relative' }}>
           <Box p={3}>
             <Title>{title}</Title>
             <Box mt={2} mb={2}>
@@ -66,8 +79,8 @@ const CardProfessor = ({ image, title, children, whatsapp, instagram }) => {
             </Grid>
             <Grid item xs={4}></Grid>
           </Grid>
-        </Grid>
-      </Grid>
+        </ColProfesor>
+      </RowProfesor>
     </Card>
   );
 };

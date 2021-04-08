@@ -19,9 +19,14 @@ const StyledGridContainer = styled(Grid)`
     max-width: 100%;
     margin: 0px !important;
   }
+
+  @media ${devices.xsMax} {
+    display: none !important;
+  }
 `;
 
 const StyledGrid = styled(Grid)`
+  width: 100%;
   @media ${devices.smMax} {
     margin-top: 64px !important;
   }

@@ -2,12 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import { Grid } from '@material-ui/core';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
+import { useHistory } from 'react-router-dom';
 const Title = styled.p`
   color: #fff;
   text-align: center;
   font-size: 45px;
   font-weight: 400;
   font-style: italic;
+  line-height: 1;
 `;
 
 const Breadcrumbs = styled.p`
@@ -23,17 +25,23 @@ const Icon = styled(ArrowForwardIcon)`
   vertical-align: top;
 `;
 
-// core components
-// const useStyles = makeStyles(styles);
+const StyledHome = styled.a`
+  cursor: pointer;
+  color: #005aaa;
+
+  :hover {
+    color: #005aaa;
+  }
+`;
 
 const TitlePage = ({ title }) => {
-  // const classes = useStyles();
+  const history = useHistory();
   return (
     <Grid container>
       <Grid item xs={12}>
         <Title>{title}</Title>
         <Breadcrumbs>
-          Home <Icon /> {title}
+          <StyledHome onClick={() => history.push('/')}>Home</StyledHome> <Icon /> {title}
         </Breadcrumbs>
       </Grid>
     </Grid>

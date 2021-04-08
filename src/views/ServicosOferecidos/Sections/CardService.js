@@ -13,6 +13,12 @@ const Title = styled.p`
   font-weight: 600;
 `;
 
+const ImageService = styled.img`
+  max-width: 450px;
+  display: block;
+  margin: auto;
+`;
+
 // const KnowMore = styled.div`
 //   width: 80%;
 //   color: #fff;
@@ -29,7 +35,7 @@ const CardService = ({ image, title, children, whatsapp, instagram }) => {
     <Card>
       <Grid container>
         <Grid item xs={12}>
-          <img alt={title} src={image} width="100%" style={{ maxHeight: '280px' }} />
+          <ImageService alt={title} src={image} width="100%" style={{ maxHeight: '280px' }} />
         </Grid>
         <Grid item xs={12} style={{ position: 'relative' }}>
           <Box p={2}>

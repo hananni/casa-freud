@@ -8,8 +8,15 @@ import { devices } from 'responsive';
 
 const useStyles = makeStyles(styles);
 
+const GridSlideHome = styled(Grid)`
+  height: 60vh;
+  @media (max-width: 780px) {
+    height: 41vh;
+  }
+`;
+
 const BigBlue = styled.div`
-  @media (min-width: 1000px) {
+  @media (min-width: 765px) {
     color: #fff;
     background-image: -webkit-linear-gradient(-45deg, #005aaa70 65%, #ffffff00 72%);
     text-align: right;
@@ -19,6 +26,10 @@ const BigBlue = styled.div`
     font-style: italic;
     display: flex;
     height: 250px;
+    max-width: 96%;
+  }
+
+  @media (min-width: 1000px) {
     max-width: 70%;
   }
 `;
@@ -26,7 +37,7 @@ const BigBlue = styled.div`
 const SliderWrapper = styled.div`
   max-width: 300px;
   margin-top: 30px;
-  @media (max-width: 999px) {
+  @media (max-width: 764px) {
     margin: auto;
 
     img {
@@ -37,7 +48,7 @@ const SliderWrapper = styled.div`
 
 const KnowMoreWrapper = styled.div`
   margin-left: auto;
-  @media (max-width: 999px) {
+  @media (max-width: 765px) {
     margin: auto;
     width: 300px;
   }
@@ -55,7 +66,7 @@ const KnowMore = styled.div`
   font-style: italic;
   cursor: pointer;
 
-  @media (max-width: 999px) {
+  @media (max-width: 765px) {
     padding-right: 90px;
   }
 `;
@@ -99,7 +110,7 @@ const SectionCourses = () => {
     ],
   };
   return (
-    <Grid container alignItems="center" style={{ height: '60vh' }}>
+    <GridSlideHome container alignItems="center">
       <Box className={classes.container}>
         <BigBlue>
           <SliderWrapper>
@@ -110,7 +121,7 @@ const SectionCourses = () => {
           </KnowMoreWrapper>
         </BigBlue>
       </Box>
-    </Grid>
+    </GridSlideHome>
   );
 };
 

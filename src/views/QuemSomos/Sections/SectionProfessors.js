@@ -18,7 +18,7 @@ const SectionProfessors = () => {
           <TitleFreud soft title="Quadro de Professores" center />
         </Box>
         <div className={classes.container} style={{ display: 'grid' }}>
-          <Grid container spacing={5}>
+          <Grid container spacing={3}>
             {PROFESSORS.map(professor => {
               return (
                 <Grid item sm={12} md={12} key={professor.title}>

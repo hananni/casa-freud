@@ -22,7 +22,7 @@ const SectionServices = () => {
           <Box mb={4}>
             <TitleFreud title="Cursos e Formações" center />
           </Box>
-          <Grid container spacing={5} alignItems="stretch">
+          <Grid container spacing={3} alignItems="stretch">
             {SERVICES.map(service => {
               return (
                 <Grid item xs={12} md={4} key={service.title}>

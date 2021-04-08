@@ -39,6 +39,7 @@ const Parallax = props => {
   // };
 
   const mdUp = useMediaQuery('(min-width:600px)');
+  const ipadDown = useMediaQuery('(max-width:780px)');
   const { filter, className, children, style, image, small } = props;
   const classes = useStyles();
   const parallaxClasses = classNames({
@@ -52,7 +53,7 @@ const Parallax = props => {
       className={parallaxClasses}
       style={{
         ...style,
-        height: props.home ? '100vh' : '400px',
+        height: props.home && !ipadDown ? '100vh' : props.home ? '80vh' : '400px',
         backgroundImage: 'url(' + image + ')',
         backgroundAttachment: props.home ? 'fixed' : 'initial',
         backgroundPosition: props.home ? 'center center' : '50% 30%',
