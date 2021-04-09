@@ -27,17 +27,17 @@ export default function HeaderLinks(props) {
   return (
     <List className={classes.list}>
       <ListItem className={classes.listItem}>
-        <Button href="/" color="transparent" className={classes.navLink}>
+        <Button href="/#" color="transparent" className={classes.navLink}>
           Home
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Button href="/quem-somos" color="transparent" className={classes.navLink}>
+        <Button href="/#/quem-somos" color="transparent" className={classes.navLink}>
           Quem somos
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Button href="/servicos-oferecidos" color="transparent" className={classes.navLink}>
+        <Button href="/#/servicos-oferecidos" color="transparent" className={classes.navLink}>
           Serviços oferecidos
         </Button>
         {/* <CustomDropdown
@@ -62,17 +62,17 @@ export default function HeaderLinks(props) {
         /> */}
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Button href="/duvidas" color="transparent" className={classes.navLink}>
+        <Button href="/#/duvidas" color="transparent" className={classes.navLink}>
           Dúvidas
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Button href="/clinica" color="transparent" className={classes.navLink}>
+        <Button href="/#/clinica" color="transparent" className={classes.navLink}>
           Clínica
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Button href="/contato" color="transparent" className={classes.navLink}>
+        <Button href="/#/contato" color="transparent" className={classes.navLink}>
           Contato
         </Button>
       </ListItem>
