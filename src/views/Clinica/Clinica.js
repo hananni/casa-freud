@@ -11,7 +11,7 @@ const getParallaxContent = () => {
 const Clinica = props => {
   return (
     <Layout parallaxContent={getParallaxContent()}>
-      <SectionFeatures />
+      <SectionFeatures ids={[1, 2, 4]} />
       <SectionRoom />
       <SectionEvaluation noMarginTop />
     </Layout>

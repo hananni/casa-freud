@@ -39,19 +39,19 @@ const COURSES = [
   {
     title: 'Formação em Psicanálise',
     description: 'O curso tem como objetivo oferecer um espaço de transmissão da psicanálise.',
-    link: '',
+    link: '/servicos-oferecidos',
     image: require('assets/img/psicanalise.jpg'),
   },
   {
     title: 'Curso de Extensão ',
     description: 'Os cursos de extensão são cursos de breve duração e direcionados a temas específicos.',
-    link: '',
+    link: '/servicos-oferecidos',
     image: require('assets/img/psicanalise-ead.JPG'),
   },
   {
     title: 'Grupos de Estudos',
     description: 'Proporciona um espaço para discutir os fundamentos da teoria e da técnica psicanalítica.',
-    link: '',
+    link: '/servicos-oferecidos',
     image: require('assets/img/clinica.JPG'),
   },
 ];
