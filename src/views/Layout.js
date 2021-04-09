@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import classNames from 'classnames';
 import Header from 'components/Header/Header.js';
 import Footer from 'components/Footer/Footer.js';
@@ -11,6 +11,10 @@ import GoToTop from 'components/GoToTop/GoToTop';
 const useStyles = makeStyles(styles);
 
 const Layout = ({ headerHeight = 400, children, isHome = false, parallaxContent }) => {
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, []);
+
   const classes = useStyles();
   return (
     <div>
