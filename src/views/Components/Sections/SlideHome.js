@@ -117,7 +117,7 @@ const SectionCourses = () => {
             <img width="340px" src={require('assets/img/curso-pdf.png')} alt="courseimg" />
           </SliderWrapper>
           <KnowMoreWrapper>
-            <KnowMore onClick={() => window.open('pdf/curso-formacao-psicanalise.pdf')}>Leia Mais</KnowMore>
+            <KnowMore onClick={() => window.open(require('assets/pdf/curso-formacao-psicanalise.pdf'))}>Leia Mais</KnowMore>
           </KnowMoreWrapper>
         </BigBlue>
       </Box>
