@@ -55,7 +55,7 @@ const SectionCourses = () => {
       <Carousel {...settings}>
         {COURSES.map(course => {
           return (
-            <CardCourse title={course.title} image={course.image} key={course.title}>
+            <CardCourse title={course.title} image={course.image} key={course.title} link={course.link}>
               {course.description}
             </CardCourse>
           );
