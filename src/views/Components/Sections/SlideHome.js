@@ -114,10 +114,10 @@ const SectionCourses = () => {
       <Box className={classes.container}>
         <BigBlue>
           <SliderWrapper>
-            <img width="340px" src={require('assets/img/fotoclinicahistoria.png')} alt="courseimg" />
+            <img width="340px" src={require('assets/img/curso-pdf.png')} alt="courseimg" />
           </SliderWrapper>
           <KnowMoreWrapper>
-            <KnowMore onClick={() => history.push('/clinica')}>Leia Mais</KnowMore>
+            <KnowMore onClick={() => window.open('pdf/curso-formacao-psicanalise.pdf')}>Leia Mais</KnowMore>
           </KnowMoreWrapper>
         </BigBlue>
       </Box>
