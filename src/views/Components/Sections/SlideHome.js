@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import styles from 'assets/jss/material-kit-react/views/componentsSections/basicsStyle.js';
 import { Box, Grid } from '@material-ui/core';
 import styled from 'styled-components';
 import { useHistory } from 'react-router';
 import { devices } from 'responsive';
+import Carousel from 'react-slick';
 
 const useStyles = makeStyles(styles);
 
@@ -35,11 +36,11 @@ const BigBlue = styled.div`
 `;
 
 const SliderWrapper = styled.div`
-  max-width: 300px;
+  max-width: 340px;
   margin-top: 30px;
   @media (max-width: 764px) {
     margin: auto;
-
+    max-width: 300px;
     img {
       width: 300px;
     }
@@ -71,7 +72,21 @@ const KnowMore = styled.div`
   }
 `;
 
+const IMAGES_SLIDE = [
+  {
+    src: require('assets/img/curso-pdf.png'),
+    link: '/clinica',
+    name: 'CLINICA',
+  },
+  {
+    src: require('assets/img/fotoclinicahistoria.png'),
+    link: 'assets/pdf/curso-formacao-psicanalise.pdf',
+    name: 'CURSO',
+  },
+];
+
 const SectionCourses = () => {
+  const [name, setName] = useState(IMAGES_SLIDE[0].name);
   const classes = useStyles();
   const history = useHistory();
   const settings = {
@@ -79,15 +94,18 @@ const SectionCourses = () => {
     infinite: true,
     speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 3,
+    slidesToScroll: 1,
     autoplay: false,
     arrows: false,
+    afterChange: e => {
+      setName(IMAGES_SLIDE[e].name);
+    },
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 1,
+          slidesToScroll: 1,
           infinite: true,
           dots: true,
         },
@@ -95,16 +113,17 @@ const SectionCourses = () => {
       {
         breakpoint: 960,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 765,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          dots: false,
         },
       },
     ],
@@ -114,10 +133,28 @@ const SectionCourses = () => {
       <Box className={classes.container}>
         <BigBlue>
           <SliderWrapper>
-            <img width="340px" src={require('assets/img/curso-pdf.png')} alt="courseimg" />
+            <Carousel {...settings}>
+              {IMAGES_SLIDE.map(img => {
+                return (
+                  <div>
+                    <img width="340px" src={img.src} alt="courseimg" />
+                  </div>
+                );
+              })}
+            </Carousel>
           </SliderWrapper>
           <KnowMoreWrapper>
-            <KnowMore onClick={() => window.open(require('assets/pdf/curso-formacao-psicanalise.pdf'))}>Leia Mais</KnowMore>
+            <KnowMore
+              onClick={() => {
+                if (name == 'CLINICA') {
+                  window.open(require('assets/pdf/curso-formacao-psicanalise.pdf'));
+                } else {
+                  history.push('/clinica');
+                }
+              }}
+            >
+              Leia Mais
+            </KnowMore>
           </KnowMoreWrapper>
         </BigBlue>
       </Box>
