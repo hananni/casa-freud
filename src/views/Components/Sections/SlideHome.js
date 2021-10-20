@@ -74,14 +74,19 @@ const KnowMore = styled.div`
 
 const IMAGES_SLIDE = [
   {
+    src: require('assets/img/curso-livre-psi.png'),
+    link: 'assets/pdf/curso-livre-psicanalise.pdf',
+    name: 'CURSO-LIVRE',
+  },
+  {
     src: require('assets/img/curso-pdf.png'),
-    link: '/clinica',
-    name: 'CLINICA',
+    link: 'assets/pdf/curso-formacao-psicanalise.pdf',
+    name: 'CURSO',
   },
   {
     src: require('assets/img/fotoclinicahistoria.png'),
-    link: 'assets/pdf/curso-formacao-psicanalise.pdf',
-    name: 'CURSO',
+    link: '/clinica',
+    name: 'CLINICA',
   },
 ];
 
@@ -146,13 +151,18 @@ const SectionCourses = () => {
           <KnowMoreWrapper>
             <KnowMore
               onClick={() => {
-                if (name == 'CLINICA') {
+                switch (name) {
+                  case "CURSO-LIVRE":
+                  window.open(require('assets/pdf/curso-livre-psicanalise.pdf'));
+                  break;
+                  case "CURSO":
                   window.open(require('assets/pdf/curso-formacao-psicanalise.pdf'));
-                } else {
-                  history.push('/clinica');
-                }
+                  break;
+                  case "CLINICA":
+                  history.push('/clinica'); 
+                  break;
               }}
-            >
+              }>
               Leia Mais
             </KnowMore>
           </KnowMoreWrapper>
