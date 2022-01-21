@@ -5,6 +5,8 @@ import SectionRoom from './Sections/SectionRoom';
 import SectionEvaluation from 'components/SectionEvalutation/SectionEvaluation';
 import Layout from 'views/Layout';
 
+import SectionProfissionais from './Sections/SectionProfissionais';
+
 const getParallaxContent = () => {
   return <TitlePage title="Clínica" />;
 };
@@ -13,6 +15,7 @@ const Clinica = props => {
     <Layout parallaxContent={getParallaxContent()}>
       <SectionFeatures ids={[1, 2, 4]} />
       <SectionRoom />
+      <SectionProfissionais />
       <SectionEvaluation noMarginTop />
     </Layout>
   );

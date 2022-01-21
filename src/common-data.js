@@ -22,7 +22,7 @@ const FEATURES = [
     id: 3,
     title: 'Clínica',
     description:
-      'Os atendimentos em nossa Clínica Escola são realizados pelos alunos do último ano do Curso de Formação em Psicanálise.',
+      'Os atendimentos são realizados por profissionais preparados para acolher as mais diversas demandas e faixas etárias.',
     link: '/clinica',
   },
 
@@ -40,19 +40,19 @@ const COURSES = [
     title: 'Formação em Psicanálise',
     description: 'O curso tem como objetivo oferecer um espaço de transmissão da psicanálise.',
     link: '/servicos-oferecidos',
-    image: require('assets/img/psicanalise.jpg'),
+    image: require('assets/img/book7.JPG'),
   },
   {
-    title: 'Curso de Extensão ',
-    description: 'Os cursos de extensão são cursos de breve duração e direcionados a temas específicos.',
+    title: 'Curso Livres ',
+    description: 'Os cursos livres são cursos de breve duração e direcionados a temas específicos.',
     link: '/servicos-oferecidos',
-    image: require('assets/img/psicanalise-ead.JPG'),
+    image: require('assets/img/turma-livre.jpg'),
   },
   {
     title: 'Grupos de Estudos',
     description: 'Proporciona um espaço para discutir os fundamentos da teoria e da técnica psicanalítica.',
     link: '/servicos-oferecidos',
-    image: require('assets/img/clinica.JPG'),
+    image: require('assets/img/book3.JPG'),
   },
 ];
 

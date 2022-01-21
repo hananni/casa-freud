@@ -4,6 +4,8 @@ import valeria from 'assets/img/valeria.JPG';
 import marcio from 'assets/img/marcio.JPG';
 import sheila from 'assets/img/sheila.JPG';
 import lauane from 'assets/img/lauane.JPG';
+import henrique from 'assets/img/henrique.jpeg';
+import cesar from 'assets/img/cesar.jpeg';
 import objetivo from 'assets/img/nosso-objetivo.jpg';
 
 const WHO_WE_ARE = {
@@ -48,6 +50,20 @@ const PROFESSORS = [
       'Possui graduação em Psicologia e pós-graduação em Psicopatologia. Psicanalista e psicóloga clínica, atua com foco em psicologia perinatal.',
     image: valeria,
     instagram: 'https://instagram.com/psicologa_lauanediniz?igshid=y64lxuraztfb',
+  },
+  {
+    title: 'Profº Henrique Lopes',
+    description:
+      'Psicanalista e escritor. Professor convidado na Casa Freud. Atua em consultório particular e como supervisor, coordena semestralmente grupos de estudo com temas diversos, tendo como ênfase a prática clincia. É autor do livro de poesias Rifle, publicado pela NegaLilu Editora.',
+    image: henrique,
+    instagram: 'https://www.instagram.com/henriquealo/',
+  },
+  {
+    title: 'Profº César Guimarães',
+    description:
+      'Psicanalista e Psicólogo. Professor convidado na Casa Freud. Especialista em psicopatologia psicanalítica. Atua em consultório particular e como supervisor clínico.',
+    image: cesar,
+    instagram: 'https://www.instagram.com/cesar.guim/',
   },
 ];
 

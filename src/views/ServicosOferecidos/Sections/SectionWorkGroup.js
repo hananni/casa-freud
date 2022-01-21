@@ -36,7 +36,7 @@ const SectionWorkGroup = () => {
           <Grid container>
             <Grid item xs={4}>
               <Box pt={5}>
-                <TitleFreud soft color="#fff" title={'Grupos de Trabalho'} fontStyle={'italic'} right />
+                <TitleFreud soft color="#fff" title={'Grupos de Estudos'} fontStyle={'italic'} right />
               </Box>
               <Typography
                 style={{ color: '#fff', fontSize: '14px', fontWeight: '200', lineHeight: '1.3', paddingTop: '10px' }}

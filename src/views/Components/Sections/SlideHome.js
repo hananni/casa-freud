@@ -74,17 +74,18 @@ const KnowMore = styled.div`
 
 const IMAGES_SLIDE = [
   {
-    src: require('assets/img/curso-livre-psi.png'),
-    link: 'assets/pdf/curso-livre-psicanalise.pdf',
-    name: 'CURSO-LIVRE',
-  },
-  {
-    src: require('assets/img/curso-pdf.png'),
-    link: 'assets/pdf/curso-formacao-psicanalise.pdf',
+    src: require('assets/img/curso-22.png'),
+    link: 'assets/pdf/formacao-psicanalise-2022.pdf',
     name: 'CURSO',
   },
   {
-    src: require('assets/img/fotoclinicahistoria.png'),
+    src: require('assets/img/grupo-estudos.png'),
+    link: 'assets/pdf/grupo-estudo-psicanalitica.pdf',
+    name: 'CURSO-LIVRE',
+  },
+
+  {
+    src: require('assets/img/profissionais.png'),
     link: '/clinica',
     name: 'CLINICA',
   },
@@ -152,17 +153,18 @@ const SectionCourses = () => {
             <KnowMore
               onClick={() => {
                 switch (name) {
-                  case "CURSO-LIVRE":
-                  window.open(require('assets/pdf/curso-livre-psicanalise.pdf'));
-                  break;
-                  case "CURSO":
-                  window.open(require('assets/pdf/curso-formacao-psicanalise.pdf'));
-                  break;
-                  case "CLINICA":
-                  history.push('/clinica'); 
-                  break;
+                  case 'CURSO-LIVRE':
+                    window.open(require('assets/pdf/grupo-estudos-psicanalitica.pdf'));
+                    break;
+                  case 'CURSO':
+                    window.open(require('assets/pdf/formacao-psicanalise-2022.pdf'));
+                    break;
+                  case 'CLINICA':
+                    history.push('/clinica');
+                    break;
+                }
               }}
-              }>
+            >
               Leia Mais
             </KnowMore>
           </KnowMoreWrapper>

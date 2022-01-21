@@ -8,11 +8,11 @@ import styled from 'styled-components';
 
 const useStyles = makeStyles(styles);
 
-const WhiteField = styled.div`
-  background-color: #fff
-  padding: 40px;
-  text-align: center;
-`;
+//const WhiteField = styled.div`
+//  background-color: #fff
+//  padding: 40px;
+//  text-align: center;
+//`;
 
 const SectionRoom = () => {
   const classes = useStyles();
@@ -22,18 +22,17 @@ const SectionRoom = () => {
       <div className={classes.section}>
         <div className={classes.container} style={{ display: 'grid' }}>
           <Box m={4}>
-            <TitleFreud title="Clínica escola" center />
+            <TitleFreud title="Clínica" center />
           </Box>
           <Box mt={2} mb={5}>
-            Os atendimentos em nossa Clínica Escola de Psicanálise são realizados pelos alunos do último ano do Curso de
-            Formação em Psicanálise da Casa Freud. Sabendo que o custo padrão de um tratamento psicanalítico é
-            convencionalmente alto, o que pode ser um dos grandes empecilhos para que a população em geral não tenha
-            acesso à psicanálise, a Casa Freud busca afastar-se dessa regra tendo como objetivo fornecer o atendimento
-            psicanalítico clínico individual e gratuito. O atendimento da Clínica Escola Casa Freud está disponível
-            apenas para maiores de 18 anos e acontece de forma presencial na sede da instituição. Interessados devem
-            entrar em contato para realizar a entrevista de triagem e iniciar os atendimentos.
+            A psicoterapia psicanalítica, é realizada por profissionais que oferecem uma escuta singular, atende às mais
+            variadas manifestações de sofrimento emocional. O psicanalista acolhe e busca compreender as fontes de
+            angústia e dor, na maneira particular que se apresentam para cada pessoa. Este trabalho promove a expansão
+            do autoconhecimento e contribui para cuidar do sofrimento psíquico gerado na história de cada um. Nossos
+            profissionais ajudam o paciente a falar sobre seus problemas e a lidar melhor com momentos de dificuldades e
+            sofrimentos. <br /> Agende sua sessão conosco.
           </Box>
-          <Grid container>
+          {/*<Grid container>
             <Grid item xs={12}>
               <img alt="room" src={room} width="100%" />
             </Grid>
@@ -64,7 +63,7 @@ const SectionRoom = () => {
                 </Box>
               </WhiteField>
             </Grid>
-          </Grid>
+          </Grid>*/}
         </div>
       </div>
     </Box>

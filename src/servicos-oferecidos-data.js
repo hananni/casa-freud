@@ -1,6 +1,6 @@
-import psicanalise from 'assets/img/psicanalise.jpg';
-import psicaead from 'assets/img/psicanalise-ead.JPG';
-import clinica from 'assets/img/clinica.JPG';
+import psicanalise from 'assets/img/book7.JPG';
+import psicaead from 'assets/img/turma-livre.jpg';
+import clinica from 'assets/img/book3.JPG';
 import book1 from 'assets/img/book1.jpg';
 import book2 from 'assets/img/book2.JPG';
 import book3 from 'assets/img/book3.JPG';
@@ -15,9 +15,9 @@ const INTRO_TEXT =
 
 const SERVICES = [
   {
-    title: ' Curso de Extensão ',
+    title: ' Cursos Livres ',
     description:
-      'Os cursos de extensão são cursos de breve duração e direcionados a temas específicos, são abertos a profissionais e estudantes de qualquer área que queiram iniciar e aprofundar seus estudos sobre psicanálise. ',
+      'Os cursos livres são cursos de breve duração e direcionados a temas específicos, são abertos a profissionais e estudantes de qualquer área que queiram iniciar e aprofundar seus estudos sobre psicanálise. ',
     image: psicaead,
   },
   {
