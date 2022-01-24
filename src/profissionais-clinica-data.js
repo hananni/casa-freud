@@ -10,7 +10,7 @@ import larissa from 'assets/img/larissa.jpg';
 import renato from 'assets/img/renato.jpg';
 import renata from 'assets/img/renata.jpg';
 import andreia from 'assets/img/andreia.jpg';
-import juliane from 'assets/img/juliane.jpg';
+import juliane from 'assets/img/juliane2.jpg';
 import viviane from 'assets/img/viviane.jpg';
 import raylanda from 'assets/img/railanda.jpg';
 
