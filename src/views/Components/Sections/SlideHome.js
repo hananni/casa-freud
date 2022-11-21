@@ -74,12 +74,12 @@ const KnowMore = styled.div`
 
 const IMAGES_SLIDE = [
   {
-    src: require('assets/img/curso-22.png'),
-    link: 'assets/pdf/formacao-psicanalise-2022.pdf',
+    src: require('assets/img/curso-23.png'),
+    link: 'assets/pdf/curso-formacao-psicanalise-2023.pdf',
     name: 'CURSO',
   },
   {
-    src: require('assets/img/grupo-estudos.png'),
+    src: require('assets/img/grupo-estudos_23.png'),
     link: 'assets/pdf/grupo-estudo-psicanalitica.pdf',
     name: 'CURSO-LIVRE',
   },
@@ -157,7 +157,7 @@ const SectionCourses = () => {
                     window.open(require('assets/pdf/grupo-estudos-psicanalitica.pdf'));
                     break;
                   case 'CURSO':
-                    window.open(require('assets/pdf/formacao-psicanalise-2022.pdf'));
+                    window.open(require('assets/pdf/curso-formacao-psicanalise-2023.pdf'));
                     break;
                   case 'CLINICA':
                     history.push('/clinica');

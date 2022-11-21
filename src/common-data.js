@@ -58,6 +58,96 @@ const COURSES = [
 
 const IMAGES = [
   {
+    src: require('assets/img/1.jpg'),
+    thumbnail: require('assets/img/1.jpg'),
+    thumbnailWidth: 350,
+    thumbnailHeight: 212,
+  },
+  // {
+  //   src: require('assets/img/2.jpg'),
+  //   thumbnail: require('assets/img/2.jpg'),
+  //   thumbnailWidth: 350,
+  //   thumbnailHeight: 212,
+  // },
+  {
+    src: require('assets/img/3.jpg'),
+    thumbnail: require('assets/img/3.jpg'),
+    thumbnailWidth: 350,
+    thumbnailHeight: 212,
+  },
+  {
+    src: require('assets/img/4.jpg'),
+    thumbnail: require('assets/img/4.jpg'),
+    thumbnailWidth: 350,
+    thumbnailHeight: 212,
+  },
+  {
+    src: require('assets/img/5.jpg'),
+    thumbnail: require('assets/img/5.jpg'),
+    thumbnailWidth: 350,
+    thumbnailHeight: 212,
+  },
+  // {
+  //   src: require('assets/img/7.jpg'),
+  //   thumbnail: require('assets/img/7.jpg'),
+  //   thumbnailWidth: 350,
+  //   thumbnailHeight: 212,
+  // },
+  {
+    src: require('assets/img/8.jpg'),
+    thumbnail: require('assets/img/8.jpg'),
+    thumbnailWidth: 350,
+    thumbnailHeight: 212,
+  },
+  {
+    src: require('assets/img/9.jpg'),
+    thumbnail: require('assets/img/9.jpg'),
+    thumbnailWidth: 350,
+    thumbnailHeight: 212,
+  },
+  {
+    src: require('assets/img/12.jpg'),
+    thumbnail: require('assets/img/12.jpg'),
+    thumbnailWidth: 350,
+    thumbnailHeight: 212,
+  },
+  {
+    src: require('assets/img/13.jpg'),
+    thumbnail: require('assets/img/13.jpg'),
+    thumbnailWidth: 350,
+    thumbnailHeight: 212,
+  },
+  {
+    src: require('assets/img/15.jpg'),
+    thumbnail: require('assets/img/15.jpg'),
+    thumbnailWidth: 350,
+    thumbnailHeight: 212,
+  },
+  // {
+  //   src: require('assets/img/16.jpg'),
+  //   thumbnail: require('assets/img/16.jpg'),
+  //   thumbnailWidth: 350,
+  //   thumbnailHeight: 212,
+  // },
+  {
+    src: require('assets/img/17.jpg'),
+    thumbnail: require('assets/img/17.jpg'),
+    thumbnailWidth: 350,
+    thumbnailHeight: 212,
+  },
+  {
+    src: require('assets/img/18.jpg'),
+    thumbnail: require('assets/img/18.jpg'),
+    thumbnailWidth: 350,
+    thumbnailHeight: 212,
+  },
+  {
+    src: require('assets/img/19.jpg'),
+    thumbnail: require('assets/img/19.jpg'),
+    thumbnailWidth: 350,
+    thumbnailHeight: 212,
+  },
+  {
     src: require('assets/img/bg.jpg'),
     thumbnail: require('assets/img/bg.jpg'),
     thumbnailWidth: 350,

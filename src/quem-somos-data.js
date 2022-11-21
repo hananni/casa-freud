@@ -1,11 +1,11 @@
-import whoWeAre from 'assets/img/who-we-are.jpg';
-import olivio from 'assets/img/olivio.jpg';
+import whoWeAre from 'assets/img/quemsomos2023.jpg';
 import valeria from 'assets/img/valeria.JPG';
-import marcio from 'assets/img/marcio.JPG';
+import marcio from 'assets/img/new-marcio.jpg';
 import sheila from 'assets/img/sheila.JPG';
-import lauane from 'assets/img/lauane.JPG';
 import henrique from 'assets/img/henrique.jpeg';
 import cesar from 'assets/img/cesar.jpeg';
+import larissa from 'assets/img/larissa-new.jpeg';
+import matheus from 'assets/img/new-matheus.jpg';
 import objetivo from 'assets/img/nosso-objetivo.jpg';
 
 const WHO_WE_ARE = {
@@ -17,20 +17,6 @@ const WHO_WE_ARE = {
 
 const PROFESSORS = [
   {
-    title: 'Profº M.e Olivio Israel Costa',
-    description:
-      'Psicólogo Clínico. Atua como psicoterapeuta e realiza avaliação psicológica em consultório particular. Especialista em Psicologia Jurídica (PUC-GO). Atualmente é mestrando do Programa de Pós-Graduação em Psicologia Clínica e Cultura da UnB.',
-    image: olivio,
-    instagram: 'https://instagram.com/oliviopsi?igshid=4649jib8e26r',
-  },
-  {
-    title: 'Profª Esp.Valéria Lopes da Silva',
-    description:
-      'Graduada em Psicologia pela Faculdade Anhanguera de Anápolis (2011); Especialista em Didática e Metodologia do Ensino Superior (2013); Especialista em Psicologia Jurídica pelo IPES (2013). Atua como psicóloga clínica com base psicanalítica.',
-    image: lauane,
-    instagram: 'https://instagram.com/psi_valeria.lopes?igshid=j7hgawt059xy',
-  },
-  {
     title: 'Profº M.e Márcio Luppi',
     description:
       'Possui graduação em psicologia pela universidade Mackenzie-SP, é mestre em psicologia pela Puc-go, atuou como coordenador do curso de psicologia no grupo anhanguera educacional na unidade Anápolis por 10 anos. Atua como docente em psicologia clínica e psicanálise além de supervisor e orientador de projetos científicos. É escritor ligado ao movimento surrealista de SP, tem um livro de haikais publicado. atua no consultório há mais de 20 anos.',
@@ -38,11 +24,25 @@ const PROFESSORS = [
     instagram: 'https://instagram.com/professor.luppi?igshid=1esftjx0syomk',
   },
   {
-    title: 'Profª Sheila',
+    title: 'Profº M.e Sheila Luppi',
     description:
       'Possui graduação em História (2006), mestrado em História pela Universidade de Brasília - UnB (2011), é psicanalista e atuou como professora no curso de Psicologia da Faculdade Anhanguera de Anápolis.',
     image: sheila,
     instagram: 'https://instagram.com/luppisheila?igshid=r73nhmz85osh',
+  },
+  {
+    title: 'Profª Esp.Larissa Geovana de Paiva Batista ',
+    description:
+      'Psicóloga. Pós graduada em saúde mental. Formação em Psicanálise pela Casa Freud. Atuando em atendimento clínico presencial e online.',
+    image: larissa,
+    instagram: 'https://www.instagram.com/psi.larissageovana/',
+  },
+  {
+    title: 'Profª Esp.Matheus Santos Alves ',
+    description:
+      'Psicanalista formado pela Casa Freud.Especialista em Filosofia e Autoconhecimento (PUCRS), Especialista em Psicopatologia psicanalítica (Casa Freud) e Especialista em Formação em Psicanálise do século XXI (FAAP).Atuando em atendimento clínico.',
+    image: matheus,
+    instagram: 'https://www.instagram.com/matheusantosalves/',
   },
   {
     title: 'Profª Esp.Lauane Carolina Diniz',

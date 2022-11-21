@@ -1,6 +1,10 @@
 import psicanalise from 'assets/img/book7.JPG';
 import psicaead from 'assets/img/turma-livre.jpg';
 import clinica from 'assets/img/book3.JPG';
+import casa1 from 'assets/img/casa1.jpg';
+import casa2 from 'assets/img/casa2.jpg';
+import casa3 from 'assets/img/casa3.jpg';
+import casa4 from 'assets/img/casa4.jpg';
 import book1 from 'assets/img/book1.jpg';
 import book2 from 'assets/img/book2.JPG';
 import book3 from 'assets/img/book3.JPG';
@@ -35,6 +39,30 @@ const SERVICES = [
 ];
 
 const BOOKS = [
+  {
+    src: casa1,
+    thumbnail: casa1,
+    thumbnailWidth: 350,
+    thumbnailHeight: 212,
+  },
+  {
+    src: casa2,
+    thumbnail: casa2,
+    thumbnailWidth: 350,
+    thumbnailHeight: 212,
+  },
+  {
+    src: casa3,
+    thumbnail: casa3,
+    thumbnailWidth: 350,
+    thumbnailHeight: 212,
+  },
+  {
+    src: casa4,
+    thumbnail: casa4,
+    thumbnailWidth: 350,
+    thumbnailHeight: 212,
+  },
   {
     src: book1,
     thumbnail: book1,
